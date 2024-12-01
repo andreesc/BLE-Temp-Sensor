@@ -1,0 +1,58 @@
+[1/5] cd /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/esp-idf/esptool_py && /home/andre/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/andre/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/partition_table/partition-table.bin /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/blesensor.bin
+blesensor.bin binary size 0x8f750 bytes. Smallest app partition is 0x100000 bytes. 0x708b0 bytes (44%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/bootloader/esp-idf/esptool_py && /home/andre/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/andre/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/3] cd /home/andre/esp/esp-idf/components/esptool_py && /home/andre/.espressif/tools/cmake/3.24.0/bin/cmake -D IDF_PATH=/home/andre/esp/esp-idf -D "SERIAL_TOOL=/home/andre/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/andre/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/andre/Documents/BLE-Temp-Sensor/Firmware/build -P /home/andre/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 blesensor.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: d4:8a:fc:cf:09:28
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0009ffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26720 bytes to 16345...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16345 compressed) at 0x00001000 in 1.8 seconds (effective 121.1 kbit/s)...
+Hash of data verified.
+Compressed 587600 bytes to 353036...
+Writing at 0x00010000... (4 %)
+Writing at 0x0001c772... (9 %)
+Writing at 0x000225bb... (13 %)
+Writing at 0x00027dd5... (18 %)
+Writing at 0x0003176a... (22 %)
+Writing at 0x00036f84... (27 %)
+Writing at 0x0003cfad... (31 %)
+Writing at 0x000437ae... (36 %)
+Writing at 0x0004948b... (40 %)
+Writing at 0x0004f3b0... (45 %)
+Writing at 0x0005504c... (50 %)
+Writing at 0x0005b698... (54 %)
+Writing at 0x00061469... (59 %)
+Writing at 0x00066f96... (63 %)
+Writing at 0x0006cef3... (68 %)
+Writing at 0x0007321f... (72 %)
+Writing at 0x00078e80... (77 %)
+Writing at 0x00082dff... (81 %)
+Writing at 0x0008aa1f... (86 %)
+Writing at 0x0009050a... (90 %)
+Writing at 0x00095c09... (95 %)
+Writing at 0x0009be5d... (100 %)
+Wrote 587600 bytes (353036 compressed) at 0x00010000 in 33.7 seconds (effective 139.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 680.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

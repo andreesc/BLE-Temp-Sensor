@@ -27083,6 +27083,76 @@
                         "range": null,
                         "title": "Enable debug asserts.",
                         "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Configure the bit to set in the task notification value when a task is blocked waiting for an event.\nThis should be set to a bit that is not used by other notifications in the system.",
+                        "id": "NIMBLE_CPP_FREERTOS_TASK_BLOCK_BIT",
+                        "name": "NIMBLE_CPP_FREERTOS_TASK_BLOCK_BIT",
+                        "range": null,
+                        "title": "FreeRTOS task block bit",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Select this option to enable Bluetooth and show the submenu with Bluetooth configuration choices.",
+                        "id": "BT_ENABLED",
+                        "name": "BT_ENABLED",
+                        "range": null,
+                        "title": "Bluetooth",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "This option is recommended for BLE only usecases to save on memory",
+                        "id": "BT_NIMBLE_ENABLED",
+                        "name": "BT_NIMBLE_ENABLED",
+                        "range": null,
+                        "title": "NimBLE - BLE only",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32P4",
+                        "help": null,
+                        "id": "BT_NIMBLE_TRANSPORT_UART",
+                        "name": "BT_NIMBLE_TRANSPORT_UART",
+                        "range": null,
+                        "title": "Enable Uart Transport",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32P4",
+                        "help": "Enable Bluetooth Support via Hosted",
+                        "id": "ESP_ENABLE_BT",
+                        "name": "ESP_ENABLE_BT",
+                        "range": null,
+                        "title": "Enable Hosted Bluetooth support",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "<choice ESP_WIFI_REMOTE_LIBRARY>",
+                                "help": null,
+                                "id": "ESP_WIFI_REMOTE_LIBRARY_HOSTED",
+                                "name": "ESP_WIFI_REMOTE_LIBRARY_HOSTED",
+                                "range": null,
+                                "title": "ESP-HOSTED",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": "IDF_TARGET_ESP32P4",
+                        "help": "Select type of WiFi Remote implementation\n\nESP-HOSTED is the default and most versatile option.\nIt's also possible to use EPPP, which uses PPPoS link between micros and NAPT, so it's slower\nand less universal.",
+                        "id": "component-config-esp-nimble-cpp-configuration-choose-wifi-remote-implementation",
+                        "name": "ESP_WIFI_REMOTE_LIBRARY",
+                        "title": "Choose WiFi-remote implementation",
+                        "type": "choice"
                     }
                 ],
                 "depends_on": null,

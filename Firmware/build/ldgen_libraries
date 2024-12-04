@@ -63,4 +63,4 @@
 /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/esp-idf/spiffs/libspiffs.a
 /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/esp-idf/main/libmain.a
-/home/andre/Documents/BLE-Temp-Sensor/Firmware/build/esp-idf/esp-nimble-cpp/libesp-nimble-cpp.a
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/build/esp-idf/esp-nimble-cpp-master/libesp-nimble-cpp-master.a

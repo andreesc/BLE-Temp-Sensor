@@ -1,5 +1,6 @@
 #include <string>
 #include "NimBLEDevice.h"
+#include "driver/i2c_types.h"
 #include "freertos/task.h"
 #include "driver/i2c_master.h"
 #include <stdio.h>
@@ -21,11 +22,14 @@ extern "C"
 #define CHARACTERISTIC_UUID_RX "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
 #define CHARACTERISTIC_UUID_TX "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
 
+static const char*      TAG = "HDC1080";
+i2c_master_dev_handle_t hdc1080_handle;
+
 BLEServer*         pServer = NULL;
 BLECharacteristic* pTxCharacteristic;
-bool               deviceConnected    = false;
+bool               deviceConnected = false;
 bool               oldDeviceConnected = false;
-uint8_t            txValue            = 0;
+uint8_t            txValue = 0;
 
 class MyServerCallbacks : public BLEServerCallbacks
 {
@@ -50,37 +54,49 @@ class MyCallbacks : public BLECharacteristicCallbacks
     }
 };
 
-// Função para obter a temperatura do sensor HDC1080 via I2C
-float hdc1080_get_temperature()
+i2c_master_bus_handle_t i2c_bus_init()
 {
     i2c_master_bus_config_t i2c_mst_config;
 
-    i2c_mst_config.clk_source                   = I2C_CLK_SRC_DEFAULT;
-    i2c_mst_config.i2c_port                     = I2C_PORT_NUM;
-    i2c_mst_config.scl_io_num                   = I2C_MASTER_SCL_IO;
-    i2c_mst_config.sda_io_num                   = I2C_MASTER_SDA_IO;
-    i2c_mst_config.glitch_ignore_cnt            = 7;
+    i2c_mst_config.clk_source = I2C_CLK_SRC_DEFAULT;
+    i2c_mst_config.i2c_port = I2C_PORT_NUM;
+    i2c_mst_config.scl_io_num = I2C_MASTER_SCL_IO;
+    i2c_mst_config.sda_io_num = I2C_MASTER_SDA_IO;
+    i2c_mst_config.glitch_ignore_cnt = 7;
     i2c_mst_config.flags.enable_internal_pullup = false;
 
     i2c_master_bus_handle_t bus_handle;
-    ESP_ERROR_CHECK(i2c_new_master_bus(&i2c_mst_config, &bus_handle));
 
+    ESP_ERROR_CHECK(i2c_new_master_bus(&i2c_mst_config, &bus_handle));
+    ESP_LOGI(TAG, "I2C master bus created");
+
+    return bus_handle;
+}
+
+i2c_master_dev_handle_t hdc1080_device_create(i2c_master_bus_handle_t bus_handle)
+{
     i2c_device_config_t dev_cfg;
 
     dev_cfg.dev_addr_length = I2C_ADDR_BIT_LEN_7;
-    dev_cfg.device_address  = HDC1080_ADDR;
-    dev_cfg.scl_speed_hz    = 100000;
+    dev_cfg.device_address = HDC1080_ADDR;
+    dev_cfg.scl_speed_hz = 100000;
 
     i2c_master_dev_handle_t dev_handle;
     ESP_ERROR_CHECK(i2c_master_bus_add_device(bus_handle, &dev_cfg, &dev_handle));
 
+    return dev_handle;
+}
+
+// Função para obter a temperatura do sensor HDC1080 via I2C
+float hdc1080_get_temperature()
+{
     uint8_t temp_reg = 0x00;
     uint8_t temp_data[2];
-    ESP_ERROR_CHECK(i2c_master_transmit(dev_handle, &temp_reg, 1, -1));
-    vTaskDelay(15 / portTICK_PERIOD_MS);  // Delay necessário para a leitura
-    ESP_ERROR_CHECK(i2c_master_receive(dev_handle, temp_data, 2, -1));
+    ESP_ERROR_CHECK(i2c_master_transmit(hdc1080_handle, &temp_reg, 1, -1));
+    vTaskDelay(pdMS_TO_TICKS(15));  // Delay necessário para a leitura
+    ESP_ERROR_CHECK(i2c_master_receive(hdc1080_handle, temp_data, 2, -1));
 
-    uint16_t raw_temp    = (temp_data[0] << 8) | temp_data[1];
+    uint16_t raw_temp = (temp_data[0] << 8) | temp_data[1];
     float    temperature = ((float) raw_temp / 65536) * 165 - 40;
     return temperature;
 }
@@ -119,6 +135,8 @@ void app_main(void)
 {
     // Inicializar o dispositivo BLE
     BLEDevice::init("UART Service");
+    i2c_master_bus_handle_t bus_handle = i2c_bus_init();
+    hdc1080_handle = hdc1080_device_create(bus_handle);
 
     // Criar o servidor BLE
     pServer = BLEDevice::createServer();

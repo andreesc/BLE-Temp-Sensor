@@ -1,0 +1,324 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+[0m
+[0;33m--- 0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x4008184a: panic_abort at /home/andre/esp/esp-idf/components/esp_system/panic.c:466
+0x4008f401: esp_system_abort at /home/andre/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40094e95: abort at /home/andre/esp/esp-idf/components/newlib/abort.c:38
+0x4008f3f7: _esp_error_check_failed at /home/andre/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6973: battery_init() at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:120 (discriminator 1)
+0x400d6ad7: app_main at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:171
+0x40124467: main_task at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008ff19: vPortTaskWrapper at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

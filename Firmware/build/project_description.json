@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "blesensor",
-    "project_version":    "edb7e59-dirty",
+    "project_version":    "db00a45-dirty",
     "project_path":       "/home/andre/Documents/BLE-Temp-Sensor/Firmware",
     "idf_path":           "/home/andre/esp/esp-idf",
     "build_dir":          "/home/andre/Documents/BLE-Temp-Sensor/Firmware/build",

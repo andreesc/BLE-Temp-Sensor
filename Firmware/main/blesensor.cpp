@@ -1,8 +1,13 @@
 #include <string>
 #include "NimBLEDevice.h"
 #include "driver/i2c_types.h"
+#include "freertos/projdefs.h"
 #include "freertos/task.h"
 #include "driver/i2c_master.h"
+#include "esp_adc/adc_oneshot.h"
+#include "esp_adc/adc_cali.h"
+#include "esp_adc/adc_cali_scheme.h"
+#include "hal/adc_types.h"
 #include <stdio.h>
 
 extern "C"
@@ -18,12 +23,18 @@ extern "C"
 #define HDC1080_ADDR 0x40
 #define HDC1080_TEMP_REG 0x00
 
+#define ADC_CHANNEL ADC_CHANNEL_9
+static int adc_raw[2][10];
+static int voltage[2][10];
+
 #define SERVICE_UUID "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"  // UART service UUID
 #define CHARACTERISTIC_UUID_RX "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
 #define CHARACTERISTIC_UUID_TX "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
 
-static const char*      TAG = "HDC1080";
-i2c_master_dev_handle_t hdc1080_handle;
+static const char*        TAG = "HDC1080";
+i2c_master_dev_handle_t   hdc1080_handle;
+adc_oneshot_unit_handle_t adc1_handle;
+adc_cali_handle_t         cali_handle;
 
 BLEServer*         pServer = NULL;
 BLECharacteristic* pTxCharacteristic;
@@ -95,10 +106,31 @@ float hdc1080_get_temperature()
     ESP_ERROR_CHECK(i2c_master_transmit(hdc1080_handle, &temp_reg, 1, -1));
     vTaskDelay(pdMS_TO_TICKS(15));  // Delay necessário para a leitura
     ESP_ERROR_CHECK(i2c_master_receive(hdc1080_handle, temp_data, 2, -1));
-
     uint16_t raw_temp = (temp_data[0] << 8) | temp_data[1];
     float    temperature = ((float) raw_temp / 65536) * 165 - 40;
     return temperature;
+}
+
+esp_err_t battery_init(void)
+{
+    adc_oneshot_unit_init_cfg_t init_config1;
+    init_config1.unit_id = ADC_UNIT_2;
+    init_config1.ulp_mode = ADC_ULP_MODE_DISABLE;
+    init_config1.clk_src = ADC_RTC_CLK_SRC_DEFAULT;
+    ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config1, &adc1_handle));
+
+    adc_oneshot_chan_cfg_t config;
+    config.bitwidth = ADC_BITWIDTH_DEFAULT;
+    config.atten = ADC_ATTEN_DB_12;
+    ESP_ERROR_CHECK(adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL, &config));
+
+    adc_cali_line_fitting_config_t cali_config;
+    cali_config.unit_id = ADC_UNIT_2;
+    cali_config.atten = ADC_ATTEN_DB_12;
+    cali_config.bitwidth = ADC_BITWIDTH_DEFAULT;
+    ESP_ERROR_CHECK(adc_cali_create_scheme_line_fitting(&cali_config, &cali_handle));
+
+    return ESP_OK;
 }
 
 // Tarefa de monitoramento da conexão BLE e notificação de dados
@@ -135,6 +167,18 @@ void app_main(void)
 {
     // Inicializar o dispositivo BLE
     BLEDevice::init("UART Service");
+
+    esp_err_t err = battery_init();
+
+    while (1)
+    {
+        ESP_ERROR_CHECK(adc_oneshot_read(adc1_handle, ADC_CHANNEL, &adc_raw[0][0]));
+        ESP_ERROR_CHECK(adc_cali_raw_to_voltage(cali_handle, adc_raw[0][0], &voltage[0][0]));
+        ESP_LOGI(TAG, "ADC%d Channel[%d] Cali Voltage: %d mV", ADC_UNIT_2 + 1, ADC_CHANNEL, voltage[0][0]);
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+
+
     i2c_master_bus_handle_t bus_handle = i2c_bus_init();
     hdc1080_handle = hdc1080_device_create(bus_handle);
 

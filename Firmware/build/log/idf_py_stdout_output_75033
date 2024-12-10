@@ -1,0 +1,1984 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (324) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (427) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (887) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (887) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (857) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (857) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (897) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (897) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (877) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (877) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (907) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (907) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (857) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (857) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (877) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (877) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (907) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (907) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (877) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (877) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (867) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (867) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (897) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (897) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (867) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (867) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (877) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (877) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (857) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (857) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (897) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (907) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (577) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;31mE (877) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (877) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (857) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (857) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (857) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (857) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (867) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (867) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (857) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (857) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;31mE (857) esp_clk_tree: esp_clk_tree_src_get_freq_hz(21): unknown clk src[0m
+[0;31mE (857) adc_oneshot: adc_oneshot_new_unit(100): clock source not supported[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x102 (ESP_ERR_INVALID_ARG) at 0x400d6973
+file: "./main/blesensor.cpp" line 120
+func: esp_err_t battery_init()
+expression: adc_oneshot_new_unit(&init_config1, &adc1_handle)
+
+abort() was called at PC 0x4008f3f7 on core 0
+
+
+Backtrace: 0x4008184a:0x3ffbbad0 0x4008f401:0x3ffbbaf0 0x40094e95:0x3ffbbb10 0x4008f3f7:0x3ffbbb80 0x400d6973:0x3ffbbbb0 0x400d6ad7:0x3ffbbc00 0x40124467:0x3ffbbc50 0x4008ff19:0x3ffbbc80
+
+
+
+
+ELF file SHA256: 24bc90d6a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 29 2024 17:40:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=177c4h ( 96196) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=000277ec vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (137) esp_image: segment 2: paddr=000277f8 vaddr=3ffbdb60 size=04b44h ( 19268) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=0002c344 vaddr=40080000 size=03cd4h ( 15572) load[0m
+[0;32mI (158) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=563d8h (353240) map[0m
+[0;32mI (281) esp_image: segment 5: paddr=00086400 vaddr=40083cd4 size=13140h ( 78144) load[0m
+[0;32mI (323) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (323) boot: Disabling RNG early entropy source...[0m
+[0;32mI (335) cpu_start: Multicore app[0m
+[0;32mI (344) cpu_start: Pro cpu start user code[0m
+[0;32mI (344) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (344) cpu_start: Application information:[0m
+[0;32mI (347) cpu_start: Project name:     blesensor[0m
+[0;32mI (352) cpu_start: App version:      db00a45-dirty[0m
+[0;32mI (358) cpu_start: Compile time:     Dec  5 2024 17:49:05[0m
+[0;32mI (364) cpu_start: ELF file SHA256:  24bc90d6a...[0m
+[0;32mI (369) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (374) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (379) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (384) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (389) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (396) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (402) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (408) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (414) heap_init: At 3FFC5750 len 0001A8B0 (106 KiB): DRAM[0m
+[0;32mI (420) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (426) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (433) heap_init: At 40096E14 len 000091EC (36 KiB): IRAM[0m
+[0;32mI (441) spi_flash: detected chip: generic[0m
+[0;32mI (444) spi_flash: flash io: dio[0m
+[0;33mW (448) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (462) coexist: coex firmware version: 27d8387[0m
+[0;32mI (467) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+[0;32mI (487) BTDM_INIT: BT controller compile version [b022216][0m
+[0;32mI (487) BTDM_INIT: Bluetooth MAC: d4:8a:fc:cf:09:2a[0m
+[0;32mI (487) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;32mI (857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (1857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (2857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (3857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (4857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (5857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (6857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (7857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (8857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (9857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (10857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (11857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (12857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (13857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (14857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (15857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (16857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (17857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (18857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (19857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (20857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (21857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (22857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (23857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (24857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (25857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (26857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (27857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (28857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (29857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (30857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (31857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (32857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (33857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (34857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (35857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (36857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (37857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (38857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (39857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (40857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (41857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (42857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (43857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (44857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (45857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (46857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (47857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (48857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (49857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (50857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (51857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (52857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (53857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (54857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (55857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (56857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (57857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (58857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (59857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (60857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (61857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (62857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (63857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (64857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (65857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (66857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (67857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (68857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (69857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (70857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (71857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (72857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (73857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (74857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (75857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (76857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (77857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (78857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (79857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (80857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (81857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (82857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (83857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (84857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (85857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (86857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (87857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (88857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (89857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (90857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (91857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (92857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (93857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (94857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (95857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (96857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (97857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (98857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (99857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (100857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (101857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (102857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (103857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (104857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (105857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (106857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (107857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (108857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (109857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (110857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (111857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (112857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (113857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (114857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (115857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (116857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (117857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (118857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (119857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (120857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (121857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (122857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (123857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (124857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (125857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (126857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (127857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (128857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (129857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (130857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (131857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (132857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (133857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (134857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (135857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (136857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (137857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (138857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (139857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (140857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (141857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (142857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (143857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (144857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (145857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (146857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (147857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (148857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (149857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (150857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (151857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (152857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (153857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (154857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (155857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (156857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (157857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (158857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (159857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (160857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (161857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (162857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (163857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (164857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (165857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (166857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (167857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (168857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (169857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (170857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (171857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (172857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (173857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (174857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (175857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (176857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (177857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (178857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (179857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (180857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (181857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (182857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (183857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (184857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (185857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (186857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (187857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (188857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (189857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (190857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (191857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (192857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (193857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (194857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (195857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (196857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (197857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (198857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (199857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (200857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (201857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (202857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (203857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (204857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (205857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (206857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+[0;32mI (207857) HDC1080: ADC1 Channel[9] Cali Voltage: 128 mV[0m
+��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p ��|p�� �p|���� p|�|��� ppp||� p|�|p |�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||��|�|� p�p�p�p|�ppp| p����||||��������pp����||||���������|������������������� |ppp�ppp�pp�|||�|�|��| p�||| p�����||� p|�|p |�|� p�p�p�p|�ppp| p ������|�|����|�|���pp ������|�|����|�|�����|��������||��ppppp�pp�|�||��p��|������p|�|��p����|p����||� p|�|p ���p�����pp�pp���|p��� �p�� �p|����pp������������pp��pp�pp���p�����pp��p�p��� pp����p���ppp �pp| pp�|p||p|p ���p|���pp�p��|�p|�p|�����||�|p|�pp||�|��p�p�pp|p ����||�pp������������p�� ��������|�||��� p ���������p�|�|ppp ������|�|����|�|�����|��������||���p|�||����|�|�|���p����p pp�����p� ||��|���pp|p � p ��|p� p�� ��p�� |�|���p �p�|pp| ppp���p��| p|�| p��|p�pp|p � p � p p� ������� ����ppp| ppp�pp|�pp��p����� �ppp| ppp�| p�p�pp��p����� �ppp| pp�p|����p�p�pp��p�������pppp| ppp���p��|ppp��p�����pppp| pp�|p||p�pp��p������ppp| pp�|��|ppp��p������pppp| p�p�p|�|�|�|ppp��p��������pppp| ppp����p�p�pp��p������pp|p � p � p � p � p ��p��p��p|��ppp�p�p|ppp�p|p����pp�|�|p � p p�����|�|���p|����� p �����p��| p�p�pp�pp�p�pp�p�p�p�p�p�p|�|� p � p p����pp��p|�����|�����p����p���ppp�|�|���pp��p�pp|� �p����� �p�����p�pp��p�p�p���pp|p |�|�|���p�����p�ppp pp�p���ppp���|p ||||�������pppp�������pppp���������pppp|��p������pppp |���������pppp���������pppp|p �|�|����p��p�p� p�|�||��p��p��p�p|p �|�|��pp��p���pp�pp�|��|pp|p|pp|p �|�|��pp| pp| pppp�|��|pp�p�p�p| p|p �|�|��pp| pppp| pp�|��|pp|� p  |�| ppp�� �p| p| p��|�|�| p|� p �|�|��pp| pppp| p|��|��|pp�p�pp|� p ��|�����pp| pppp|�| p|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�p��p���p���ppp|pp�p|��p��� ���p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp��|�| �p|��p��p�|�pp�|��p�p�pp�pp�p| p�p|pp| p�p�p�p||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp|��|���p���|p�p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�|| p����p���p�|�|ppp���pp||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|��������p�p�ppp�p pp���pppppp�pp| p|pp�||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|��������p�p�ppp�p p|�|���ppppppp�pp��p�p|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|��������p�p�ppp�p p�|��| pp�p��p�pp�p| �||� p|�|p |�|� p�p�p�p|�pp�||pppp��|�|���pp|�||�|��ppp��p� �|p|����| ��p��|��������|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|���pp����p��p�|�| p�� �|���p||� p|�|p |�|� p�p�p�p|�pp�|ppppp��|�|���pp�p�ppp��| pppppppppppp��|� ���pppppppppp����pp�pp�������pppp��|���||�|� p|�|p |�|� p�p�p�p|�pp�|pppp��|�|���ppppp|����pppppppppppppp��p��pp�� �� ppppppppp�ppp�pppppp�ppppppppp| ppp||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|���ppp�pp|��|�||��pppppppppp�p�� �� ppppppppppp�ppp�pppppp�pppppppp�pppp||� p|�|p |�|� p�p�p�p|�pp p| p��|�|���ppp�pp�� ����|p��pppppppppp�� ����|p��p ppppppppppppppp�pppppppp�pppppp||� p|�|p |�|� p�p�p�p|�ppp�pppp��|�|���pp|��p|��p� ���p��p�|�| p�� �|���||� p|�|p |�|� p�p�p�p|�ppp| p����|�|����pp�����|�|��pp�pp� �����pppp�ppp�ppp�� �����p�p�| ppp�ppp��p����p�p|�||| | p p�p|p�p| p|� �||� p|�|p |�|� p�p�p�p|�ppp�p| p����|�|����pp�����|�|��p�p�pp� �����pppp�p|�|����p�� �����p�p��pppppp��p����ppppp| | p ppppp| p|�|��||� p|�|p |�|� p�p�p�p|�ppp�p| p����|�|����pp�����|�|��p�p�pp� �����pppp�p|�|��pp�� �����p�p�����| pp��p����pp|p|�| | p p�p�p�p| pppp|�|��||� p|�|p |�|� p�p�p�p|�ppp�ppppp����|�|����pp�����|�|��p�p�pp� �����pppp�p���p|�| p�� �����p| pppppppp��p����pp�p��| | p p�p�p�p|ppppp|�|��||� p|�|p |�|� p�p�p�p|�ppp�ppppp����|�|����pp�����|�|��p|ppp� �����pppp�ppp�ppp�� �����p| pp�pp�ppp��p����p�p||p�p| p|p�p�p�p| pppp|� �||� p|�|p |�|� p�p�p�p|�ppppp�pppp����|�|����pp�����|�|��p�p�pp� �����ppppp|�| ppp�� �����p| ppp�p��| p��p����p�p�p�p| p| p p| p�p|�| p|�|��||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp��|�|���ppp�|���p p���|�| p� ���p��p�|�| p �p|�������pp��ppppp||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp��|�|���pp��p��� �||�|��ppp��p� �|p|����| ��p��|��������|�|� p|�|p |�|� p�p�p�p|�pp|p�p�pppp�����|�� ���pp|��|���p���|p�p �||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp�p�| p���p��� ��p�����p��|����||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp���p������pp�p| pppppppppp�||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp |||� ��p�|�| pp|���|p�|� ��p�|�|pp||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp�p�|p|�����p|�|��pppppp�|�����||�|p�||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp�����|�� ���pp p������p�|�|pppppppp��pp |�|����p�����||� p|�|p |�|� p�p�p�p|�pp|p�ppppp�����|�� ���pp �|�| �p|��p��p�|��pppppp����pp�pp�pp�p| p�p|pp|p�pp�p||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���ppp��p��p|��ppp�p�p|pppp�p|p����pp�|��|�|� p|�|p |�|� p�p�p�p|�pp|p|pppp�����|�� ���pp�p��p����ppppppppppp���ppp|p||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp|�p| p�|| p����pppppp�p p||� p|�|p |�|� p�p�p�p|�pp|p|pppp�����|�� ���pp|� p�|| p����pppppp���pp�pp||� p|�|p |�|� p�p�p�p|�pp|pp| p�����|�� ���pp || p����pppppppppp���pp||� p|�|p |�|� p�p�p�p|�pp|pp�pppp|��� ��|�||���ppp||���p� ||p�p|�� pp� �|p �� �p|�|��p��|pp���|�|�p��p |�|�||� ��p�|�|pp||� p|�|p |�|� p�p�p�p|�pp|p�p| p|��� ��|�||���pp �p�p��� ����ppp|��| ppppppp�pp pp�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�| p�pppp|��� ��|�||���pp �p�p�� ||pppp|��| ppppp�p �| pp�| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�| ppppp|��� ��|�||���pp �p�p�� ��p �ppp|��| ppppp|ppppp| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�|p| p|��� ��|�||���pp �p�p��� ��p|�| pp|��| pppp�p p pppp| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�|pppppp|��� ��|�||���pp �p�p���p|�| pp|��| ppppp�p �ppp| p�p �pp�pp��pp��|�||� p|�|p |�|� p�p�p�p|�pp�|pp| p|��� ��|�||���pp �p�p���||p�ppp|��| pppp�p �  ppp�p�pp�p �pp�pp��pp��|�||� p|�|p |�|� p�p�p�p|�pp�||p�pppp|��� ��|�||���pp �p| pp�p|����p| p|��| ppppp�p�p� p|p| p�p �pp�pppp� �|�||� p|�|p |�|� p�p�p�p|�pp�|�|pppp��p����|��|ppp���������p�|| �pp��|����p���||� p|�|p |�|� p�p�p�p|�pp�|�|�| p��p����|��|ppp�|��| pp�|ppp��p�||�|� p|�|p |�|� p�p�p�p|��p�|�| pppp��p����|��|ppp���������p��p���| p�p||| p|�����p�|| p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���ppp| p��pp p��|�p|��p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���|�|� p|�|p |�|� p�p�p�p|�pp�|�|ppppp��|���p����pp��|��p��p��|��� ��p������p�|�|ppp�p|��p�pp||�|� p|�|p |�|� p�p�p�p|�pp�|�|�| p|� �p|����� �����ppp�� ����p|�| p ���p||� p|�|p |�|� p�p�p�p|�pp�|�|�| p|� �p|����� �����pp � |�||�|��p ���|�p| |�|� p|�|p |�|� p�p�p�p|�pp�| p| p ���|��p�pp���pp �p��|�|����|�|�|���p��|�| �p|��p������p�|�| p|�p�p�p�p�p|��|�|� p|�|p |�|� p�p�p�p|�pp�| p| p ���|��p�pp���pp |�����|�|��| p|� � �pp�|ppp �p����p���pp�p�p�p �||� p|�|p |�|� p�p�p�p|�pp�| p| p|��|�||���pp|���������p�|�| p| p| p| p�p ������p�p| p�pp�p|�p|pp| p�pp||�|� p|�|p |�|� p�p�p�p|��p�|�|�| p|��|�||���pp�� ��p|��p|����p�� ||p�� ��p�|�| p�� �� p����� �����p|��p�|�����������|p�� �p|���� p|�|��� ppp||� p|�|p |�|� p�p�p�p|�p p|�| p����||||��������pp����||||���������|������������������� |ppp�ppp�pp�|||�|�|��| p�||| p�����||� p|�|p |�|� p�p�p�p|�p p|�| p ������|�|����|�|���pp ������|�|����|�|�����|��������||��ppppp�pp�|�||��p��|������p|�|��p����|p����||� p|�|p ���p�����pp�pp���|p��� �p�� �p|����pp������������pp��pp�pp���p�����pp��p�p��� pp����p���ppp �pp| pp�|p||p|p ���p|���pp�p��|�p|�p|�����||�|p|�pp||�|��p�p�pp|p ����||�pp������������p�� ��������|�||��� p ���������p�|�|ppp ������|�|����|�|�����|��������||���p|�||����|�|�|���p����p pp�����p� ||��|���pp|p � p ��|p� p�� ��p�� |�|���p �p�|pp| ppp���p��| p|�| p��|p�pp|p � p � p p� ������� ����ppp| ppp�pp|�pp��p����� �ppp| ppp�| p�p�pp��p����� �ppp| pp�p|����p�p�pp��p�������pppp| ppp���p��|ppp��p�����pppp| pp�|p||p�pp��p������ppp| pp�|��|ppp��p������pppp| p�p�p|�|�|�|ppp��p��������pppp| ppp����p�p�pp��p������pp|p � p � p � p � p ��p��p��p|��ppp�p�p|ppp�p|p����pp�|�|p � p p�����|�|���p|����� p �����p��| p�p�pp�pp�p�pp�p�p�p�p�p�p|�|� p � p p����pp��p|�����|�����p����p���ppp�|�|���pp��p�pp|� �p����� �p�����p�pp��p�p�p���pp|p |�|�|���p�����p�ppp pp�p���ppp���|p ||||�������pppp�������pppp���������pppp|��p������pppp |���������pppp���������pppp|p �|�|����p��p�p� p�|�||��p��p��p�p|p �|�|��pp��p���pp�pp�|��|pp|p|pp|p �|�|��pp| pp| pppp�|��|pp�p�p�p| p|p �|�|��pp| pppp| pp�|��|pp|� p  |�| ppp�� �p| p| p��|�|�| p|� p �|�|��pp| pppp| p|��|��|pp�p�pp|� p ��|�����pp| pppp|�| p|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�p��p���p���ppp|pp�p|��p��� ���p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp��|�| �p|��p��p�|�pp�|��p�p�pp�pp�p| p�p|pp| p�p�p�p||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp|��|���p���|p�p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�|| p����p���p�|�|ppp���pp||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|��������p�p�ppp�p pp���pppppp�pp| p|pp�||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|��������p�p�ppp�p p|�|���ppppppp�pp��p�p|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|��������p�p�ppp�p p�|��| pp�p��p�pp�p| �||� p|�|p |�|� p�p�p�p|�pp�||pppp��|�|���pp|�||�|��ppp��p� �|p|����| ��p��|��������|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|���pp����p��p�|�| p�� �|���p||� p|�|p |�|� p�p�p�p|�pp�|ppppp��|�|���pp�p�ppp��| pppppppppppp��|� ���pppppppppp����pp�pp�������pppp��|���||�|� p|�|p |�|� p�p�p�p|�pp�|pppp��|�|���ppppp|����pppppppppppppp��p��pp�� �� ppppppppp�ppp�pppppp�ppppppppp| ppp||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|���ppp�pp|��|�||��pppppppppp�p�� �� ppppppppppp�ppp�pppppp�pppppppp�pppp||� p|�|p |�|� p�p�p�p|�pp p| p��|�|���ppp�pp�� ����|p��pppppppppp�� ����|p��p ppppppppppppppp�pppppppp�pppppp||� p|�|p |�|� p�p�p�p|�ppp�pppp��|�|���pp|��p|��p� ���p��p�|�| p�� �|���||� p|�|p |�|� p�p�p�p|�ppp| p����|�|����pp�����|�|��pp�pp� �����pppp�ppp�ppp�� �����p�p�| ppp�ppp��p����p�p|�||| | p p�p|p�p| p|� �||� p|�|p |�|� p�p�p�p|�ppp�p| p����|�|����pp�����|�|��p�p�pp� �����pppp�p|�|����p�� �����p�p��pppppp��p����ppppp| | p ppppp| p|�|��||� p|�|p |�|� p�p�p�p|�ppp�p| p����|�|����pp�����|�|��p�p�pp� �����pppp�p|�|��pp�� �����p�p�����| pp��p����pp|p|�| | p p�p�p�p| pppp|�|��||� p|�|p |�|� p�p�p�p|�ppp�ppppp����|�|����pp�����|�|��p�p�pp� �����pppp�p���p|�| p�� �����p| pppppppp��p����pp�p��| | p p�p�p�p|ppppp|�|��||� p|�|p |�|� p�p�p�p|�ppp�ppppp����|�|����pp�����|�|��p|ppp� �����pppp�ppp�ppp�� �����p| pp�pp�ppp��p����p�p||p�p| p|p�p�p�p| pppp|� �||� p|�|p |�|� p�p�p�p|�ppppp�pppp����|�|����pp�����|�|��p�p�pp� �����ppppp|�| ppp�� �����p| ppp�p��| p��p����p�p�p�p| p| p p| p�p|�| p|�|��||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp��|�|���ppp�|���p p���|�| p� ���p��p�|�| p �p|�������pp��ppppp||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp��|�|���pp��p��� �||�|��ppp��p� �|p|����| ��p��|��������|�|� p|�|p |�|� p�p�p�p|�pp|p�p�pppp�����|�� ���pp|��|���p���|p�p �||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp�p�| p���p��� ��p�����p��|����||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp���p������pp�p| pppppppppp�||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp |||� ��p�|�| pp|���|p�|� ��p�|�|pp||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp�p�|p|�����p|�|��pppppp�|�����||�|p�||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp�����|�� ���pp p������p�|�|pppppppp��pp |�|����p�����||� p|�|p |�|� p�p�p�p|�pp|p�ppppp�����|�� ���pp �|�| �p|��p��p�|��pppppp����pp�pp�pp�p| p�p|pp|p�pp�p||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���ppp��p��p|��ppp�p�p|pppp�p|p����pp�|��|�|� p|�|p |�|� p�p�p�p|�pp|p|pppp�����|�� ���pp�p��p����ppppppppppp���ppp|p||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp|�p| p�|| p����pppppp�p p||� p|�|p |�|� p�p�p�p|�pp|p|pppp�����|�� ���pp|� p�|| p����pppppp���pp�pp||� p|�|p |�|� p�p�p�p|�pp|pp| p�����|�� ���pp || p����pppppppppp���pp||� p|�|p |�|� p�p�p�p|�pp|pp�pppp|��� ��|�||���ppp||���p� ||p�p|�� pp� �|p �� �p|�|��p��|pp���|�|�p��p |�|�||� ��p�|�|pp||� p|�|p |�|� p�p�p�p|�pp|p�p| p|��� ��|�||���pp �p�p��� ����ppp|��| ppppppp�pp pp�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�| p�pppp|��� ��|�||���pp �p�p�� ||pppp|��| ppppp�p �| pp�| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�| ppppp|��� ��|�||���pp �p�p�� ��p �ppp|��| ppppp|ppppp| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�|p| p|��� ��|�||���pp �p�p��� ��p|�| pp|��| pppp�p p pppp| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�|pppppp|��� ��|�||���pp �p�p���p|�| pp|��| ppppp�p �ppp| p�p �pp�pp��pp��|�||� p|�|p |�|� p�p�p�p|�pp�|pp| p|��� ��|�||���pp �p�p���||p�ppp|��| pppp�p �  ppp�p�pp�p �pp�pp��pp��|�||� p|�|p |�|� p�p�p�p|�pp�||p�pppp|��� ��|�||���pp �p| pp�p|����p| p|��| ppppp�p�p� p|p| p�p �pp�pppp� �|�||� p|�|p |�|� p�p�p�p|�pp�|�|pppp��p����|��|ppp���������p�|| �pp��|����p���||� p|�|p |�|� p�p�p�p|�pp�|�|�| p��p����|��|ppp�|��| pp�|ppp��p�||�|� p|�|p |�|� p�p�p�p|��p�|�| pppp��p����|��|ppp���������p��p���| p�p||| p|�����p�|| p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���ppp| p��pp p��|�p|��p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���|�|� p|�|p |�|� p�p�p�p|�pp�|�|ppppp��|���p����pp��|��p��p��|��� ��p������p�|�|ppp�p|��p�pp||�|� p|�|p |�|� p�p�p�p|�pp�|�|�| p|� �p|����� �����ppp�� ����p|�| p ���p||� p|�|p |�|� p�p�p�p|�pp�|�|�| p|� �p|����� �����pp � |�||�|��p ���|�p| |�|� p|�|p |�|� p�p�p�p|�pp�| p| p ���|��p�pp���pp �p��|�|����|�|�|���p��|�| �p|��p������p�|�| p|�p�p�p�p�p|��|�|� p|�|p |�|� p�p�p�p|�pp�| p| p ���|��p�pp���pp |�����|�|��| p|� � �pp�|ppp �p����p���pp�p�p�p �||� p|�|p |�|� p�p�p�p|�pp�| p| p|��|�||���pp|���������p�|�| p| p| p| p�p ������p�p| p�pp�p|�p|pp| p�pp||�|� p|�|p |�|� p�p�p�p|��p�|�|�| p|��|�||���pp�� ��p|��p|����p�� ||p�� ��p�|�| p�� �� p����� �����p|��p�|�����������|p�� �p|���� p|�|��� ppp||� p|�|p |�|� p�p�p�p|�p pp| p����||||��������pp����||||���������|������������������� |ppp�ppp�pp�|||�|�|��| p�||| p�����||� p|�|p |�|� p�p�p�p|�p p�p| p ������|�|����|�|���pp ������|�|����|�|�����|��������||��ppppp�pp�|�||��p��|������p|�|��p����|p����||� p|�|p ���p�����pp�pp���|p��� �p�� �p|����pp������������pp��pp�pp���p�����pp��p�p��� pp����p���ppp �pp| pp�|p||p|p ���p|���pp�p��|�p|�p|�����||�|p|�pp||�|��p�p�pp|p ����||�pp������������p�� ��������|�||��� p ���������p�|�|ppp ������|�|����|�|�����|��������||���p|�||����|�|�|���p����p pp�����p� ||��|���pp|p � p ��|p� p�� ��p�� |�|���p �p�|pp| ppp���p��| p|�| p��|p�pp|p � p � p p� ������� ����ppp| ppp�pp|�pp��p����� �ppp| ppp�| p�p�pp��p����� �ppp| pp�p|����p�p�pp��p�������pppp| ppp���p��|ppp��p�����pppp| pp�|p||p�pp��p������ppp| pp�|��|ppp��p������pppp| p�p�p|�|�|�|ppp��p��������pppp| ppp����p�p�pp��p������pp|p � p � p � p � p ��p��p��p|��ppp�p�p|ppp�p|p����pp�|�|p � p p�����|�|���p|����� p �����p��| p�p�pp�pp�p�pp�p�p�p�p�p�p|�|� p � p p����pp��p|�����|�����p����p���ppp�|�|���pp��p�pp|� �p����� �p�����p�pp��p�p�p���pp|p |�|�|���p�����p�ppp pp�p���ppp���|p ||||�������pppp�������pppp���������pppp|��p������pppp |���������pppp���������pppp|p �|�|����p��p�p� p�|�||��p��p��p�p|p �|�|��pp��p���pp�pp�|��|pp|p|pp|p �|�|��pp| pp| pppp�|��|pp�p�p�p| p|p �|�|��pp| pppp| pp�|��|pp|� p  |�| ppp�� �p| p| p��|�|�| p|� p �|�|��pp| pppp| p|��|��|pp�p�pp|� p ��|�����pp| pppp|�| p|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�p��p���p���ppp|pp�p|��p��� ���p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp��|�| �p|��p��p�|�pp�|��p�p�pp�pp�p| p�p|pp| p�p�p�p||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp|��|���p���|p�p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�|| p����p���p�|�|ppp���pp||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|��������p�p�ppp�p pp���pppppp�pp| p|pp�||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|��������p�p�ppp�p p|�|���ppppppp�pp��p�p|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|��������p�p�ppp�p p�|��| pp�p��p�pp�p| �||� p|�|p |�|� p�p�p�p|�pp�||pppp��|�|���pp|�||�|��ppp��p� �|p|����| ��p��|��������|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|���pp����p��p�|�| p�� �|���p||� p|�|p |�|� p�p�p�p|�pp�|ppppp��|�|���pp�p�ppp��| pppppppppppp��|� ���pppppppppp����pp�pp�������pppp��|���||�|� p|�|p |�|� p�p�p�p|�pp�|pppp��|�|���ppppp|����pppppppppppppp��p��pp�� �� ppppppppp�ppp�pppppp�ppppppppp| ppp||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|���ppp�pp|��|�||��pppppppppp�p�� �� ppppppppppp�ppp�pppppp�pppppppp�pppp||� p|�|p |�|� p�p�p�p|�pp p| p��|�|���ppp�pp�� ����|p��pppppppppp�� ����|p��p ppppppppppppppp�pppppppp�pppppp||� p|�|p |�|� p�p�p�p|�ppp�pppp��|�|���pp|��p|��p� ���p��p�|�| p�� �|���||� p|�|p |�|� p�p�p�p|�ppp| p����|�|����pp�����|�|��pp�pp� �����pppp�ppp�ppp�� �����p�p�| ppp�ppp��p����p�p|�||| | p p�p|p�p| p|� �||� p|�|p |�|� p�p�p�p|�ppp�p| p����|�|����pp�����|�|��p�p�pp� �����pppp�p|�|����p�� �����p�p��pppppp��p����ppppp| | p ppppp| p|�|��||� p|�|p |�|� p�p�p�p|�ppp�p| p����|�|����pp�����|�|��p�p�pp� �����pppp�p|�|��pp�� �����p�p�����| pp��p����pp|p|�| | p p�p�p�p| pppp|�|��||� p|�|p |�|� p�p�p�p|�ppp�ppppp����|�|����pp�����|�|��p�p�pp� �����pppp�p���p|�| p�� �����p| pppppppp��p����pp�p��| | p p�p�p�p|ppppp|�|��||� p|�|p |�|� p�p�p�p|�ppp�ppppp����|�|����pp�����|�|��p|ppp� �����pppp�ppp�ppp�� �����p| pp�pp�ppp��p����p�p||p�p| p|p�p�p�p| pppp|� �||� p|�|p |�|� p�p�p�p|�ppppp�pppp����|�|����pp�����|�|��p�p�pp� �����ppppp|�| ppp�� �����p| ppp�p��| p��p����p�p�p�p| p| p p| p�p|�| p|�|��||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp��|�|���ppp�|���p p���|�| p� ���p��p�|�| p �p|�������pp��ppppp||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp��|�|���pp��p��� �||�|��ppp��p� �|p|����| ��p��|��������|�|� p|�|p |�|� p�p�p�p|�pp|p�p�pppp�����|�� ���pp|��|���p���|p�p �||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp�p�| p���p��� ��p�����p��|����||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp���p������pp�p| pppppppppp�||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp |||� ��p�|�| pp|���|p�|� ��p�|�|pp||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp�p�|p|�����p|�|��pppppp�|�����||�|p�||� p|�|p |�|� p�p�p�p|�pp|p�p�pppp�����|�� ���pp p������p�|�|pppppppp��pp |�|����p�����||� p|�|p |�|� p�p�p�p|�pp|p�ppppp�����|�� ���pp �|�| �p|��p��p�|��pppppp����pp�pp�pp�p| p�p|pp|p�pp�p||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���ppp��p��p|��ppp�p�p|pppp�p|p����pp�|��|�|� p|�|p |�|� p�p�p�p|�pp|p|pppp�����|�� ���pp�p��p����ppppppppppp���ppp|p||� p|�|p |�|� p�p�p�p|�pp|p|�| p�����|�� ���pp|�p| p�|| p����pppppp�p p||� p|�|p |�|� p�p�p�p|�pp|p|pppp�����|�� ���pp|� p�|| p����pppppp���pp�pp||� p|�|p |�|� p�p�p�p|�pp|pp| p�����|�� ���pp || p����pppppppppp���pp||� p|�|p |�|� p�p�p�p|�pp|pp�pppp|��� ��|�||���ppp||���p� ||p�p|�� pp� �|p �� �p|�|��p��|pp���|�|�p��p |�|�||� ��p�|�|pp||� p|�|p |�|� p�p�p�p|�pp|p�p| p|��� ��|�||���pp �p�p��� ����ppp|��| ppppppp�pp pp�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�| p�pppp|��� ��|�||���pp �p�p�� ||pppp|��| ppppp�p �| pp�| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�| ppppp|��� ��|�||���pp �p�p�� ��p �ppp|��| ppppp|ppppp| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�|p| p|��� ��|�||���pp �p�p��� ��p|�| pp|��| pppp�p p pppp| p�p �pp�pp�p� �|�||� p|�|p |�|� p�p�p�p|�pp�|pppppp|��� ��|�||���pp �p�p���p|�| pp|��| ppppp�p �ppp| p�p �pp�pp��pp��|�||� p|�|p |�|� p�p�p�p|�pp�|pp| p|��� ��|�||���pp �p�p���||p�ppp|��| pppp�p �  ppp�p�pp�p �pp�pp��pp��|�||� p|�|p |�|� p�p�p�p|�pp�||p�pppp|��� ��|�||���pp �p| pp�p|����p| p|��| ppppp�p�p� p|p| p�p �pp�pppp� �|�||� p|�|p |�|� p�p�p�p|�pp�|�|pppp��p����|��|ppp���������p�|| �pp��|����p���||� p|�|p |�|� p�p�p�p|�pp�|�|�| p��p����|��|ppp�|��| pp�|ppp��p�||�|� p|�|p |�|� p�p�p�p|��p�|�| pppp��p����|��|ppp���������p��p���| p�p||| p|�����p�|| p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���ppp| p��pp p��|�p|��p�|��p��p��pp| p�|��p��p|���pp�|� ���p|��� ���|�|� p|�|p |�|� p�p�p�p|�pp�|�|ppppp��|���p����pp��|��p��p��|��� ��p������p�|�|ppp�p|��p�pp||�|� p|�|p |�|� p�p�p�p|�pp�|�|�| p|� �p|����� �����ppp�� ����p|�| p ���p||� p|�|p |�|� p�p�p�p|�pp�|�|�| p|� �p|����� �����pp � |�||�|��p ���|�p| |�|� p|�|p |�|� p�p�p�p|�pp�| p| p ���|��p�pp���pp �p��|�|����|�|�|���p��|�| �p|��p������p�|�| p|�p�p�p�p�p|��|�|� p|�|p |�|� p�p�p�p|�pp�| p| p ���|��p�pp���pp |�����|�|��| p|� � �pp�|ppp �p����p���pp�p�p�p �||� p|�|p |�|� p�p�p�p|�pp�| p| p|��|�||���pp|���������p�|�| p| p| p| p�p ������p�p| p�pp�p|�p|pp| p�pp||�|� p|�|p |�|� p�p�p�p|��p�|�|�| p|��|�||���pp�� ��p|��p|����p�� ||p�� ��p�|�| p�� �� p����� �����p|��p�|�����������|p�� �p|���� p|�|��� ppp||� p|�|p |�|� p�p�p�p|�p p|�| p����||||��������pp����||||���������|������������������� |ppp�ppp�pp�|||�|�|��| p�||| p�����||� p|�|p |�|� p�p�p�p|�p p|�| p ������|�|����|�|���pp ������|�|����|�|�����|��������||��ppppp�pp�|�||��p��|������p|�|��p����|p����||� p|�|p ���p�����pp�pp���|p��� �p�� �p|����pp������������pp��pp�pp���p�����pp��p�p��� pp����p���ppp �pp| pp�|p||p|p ���p|���pp�p��|�p|�p|�����||�|p|�pp||�|��p�p�pp|p ����||�pp������������p�� ��������|�||��� p ���������p�|�|ppp ������|�|����|�|�����|��������||���p|�||����|�|�|���p����p pp�����p� ||��|���pp|p � p ��|p� p�� ��p�� |�|���p �p�|pp| ppp���p��| p|�| p��|p�pp|p � p � p p� ������� ����ppp| ppp�pp|�pp��p����� �ppp| ppp�| p�p�pp��p����� �ppp| pp�p|����p�p�pp��p�������pppp| ppp���p��|ppp��p�����pppp| pp�|p||p�pp��p������ppp| pp�|��|ppp��p������pppp| p�p�p|�|�|�|ppp��p��������pppp| ppp����p�p�pp��p������pp|p � p � p � p � p ��p��p��p|��ppp�p�p|ppp�p|p����pp�|�|p � p p�����|�|���p|����� p �����p��| p�p�pp�pp�p�pp�p�p�p�p�p�p|�|� p � p p����pp��p|�����|�����p����p���ppp�|�|���pp��p�pp|� �p����� �p�����p�pp��p�p�p���pp|p |�|�|���p�����p�ppp pp�p���ppp���|p ||||�������pppp�������pppp���������pppp|��p������pppp |���������pppp���������pppp|p �|�|����p��p�p� p�|�||��p��p��p�p|p �|�|��pp��p���pp�pp�|��|pp|p|pp|p �|�|��pp| pp| pppp�|��|pp�p�p�p| p|p �|�|��pp| pppp| pp�|��|pp|� p  |�| ppp�� �p| p| p��|�|�| p|� p �|�|��pp| pppp| p|��|��|pp�p�pp|� p ��|�����pp| pppp|�| p|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�p��p���p���ppp|pp�p|��p��� ���p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp��|�| �p|��p��p�|�pp�|��p�p�pp�pp�p| p�p|pp| p�p�p�p||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp|��|���p���|p�p��|�|��|�|����||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|���pp�|| p����p���p�|�|ppp���pp||� p|�|p |�|� p�p�p�p|�pp|p�pppp��|�|��������p�p�ppp�p pp���pppppp�pp| p|pp�||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|��������p�p�ppp�p p|�|���ppppppp�pp��p�p|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|��������p�p�ppp�p p�|��| pp�p��p�pp�p| �||� p|�|p |�|� p�p�p�p|�pp�||pppp��|�|���pp|�||�|��ppp��p� �|p|����| ��p��|��������|�|� p|�|p |�|� p�p�p�p|�pp�| pppp��|�|���pp����p��p�|�| p�� �|���p||� p|�|p |�|� p�p�p�p|�pp�|ppppp��|�|���pp�p�ppp��| pppppppppppp��|� ���pppppppppp����pp�pp�������pppp��|���||�|� p|�|p |�|� p�p�p�p|�pp�|pppp��|�|���ppppp|����pppppppppppppp��p��pp�� �� ppppppppp�ppp�pppppp�ppppppppp| ppp||� p|�|p |�|� p�p�p�p|�pp�|�| p��|�|���ppp�pp|��|�||��pppppppppp�p�� �� ppppppppppp�ppp�pppppp�pppppppp�pppp||� p|�|p |�|� p�p�p�p|�pp p| p��|�|���ppp�pp�� ����|p��pppppppppp�� ����|p��p ppppppppppppppp�pppppppp�pppppp||� p|�|p |�|� p�p�p�p|�ppp�pppp��|�|���pp|��p|��p� ���p��p�|�| p�� �|���||� p|�|p |�|� p�p�p�p|�ppp| p����|�|����pp�����|�|��pp�pp� �����pppp�ppp�ppp�� �����p�p�| ppp�ppp��p����p�p|�||| | p p�p|p�p| p|� �||� p|�|p 

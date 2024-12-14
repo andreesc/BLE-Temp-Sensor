@@ -1,0 +1,123 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200e038: ble_npl_mutex_pend at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+ (inlined by) ble_hs_lock_nested at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+0x4200e072: ble_hs_lock at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:224
+[0m
+[0;33m--- 0x4000af8c: multi_heap_internal_unlock in ROM
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0;33m--- 0x400031b6: software_reset_cpu in ROM
+[0m
+[0m

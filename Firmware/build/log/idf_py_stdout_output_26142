@@ -1,0 +1,1027 @@
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (23) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (25) boot: chip revision: v0.1[0m
+[0;32mI (26) boot: efuse block revision: v0.2[0m
+[0;32mI (31) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (36) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42080020 size=1a538h (107832) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002a560 vaddr=40800000 size=05ab8h ( 23224) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=79dech (499180) map[0m
+[0;32mI (279) esp_image: segment 3: paddr=000a9e14 vaddr=40805ab8 size=0add4h ( 44500) load[0m
+[0;32mI (294) esp_image: segment 4: paddr=000b4bf0 vaddr=40810890 size=02408h (  9224) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=000b7000 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (305) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (306) boot: Disabling RNG early entropy source...[0m
+[0;32mI (323) cpu_start: Unicore app[0m
+[0;33mW (332) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (338) cpu_start: Pro cpu start user code[0m
+[0;32mI (339) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (339) cpu_start: Application information:[0m
+[0;32mI (341) cpu_start: Project name:     blesensor[0m
+[0;32mI (347) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (352) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (358) cpu_start: ELF file SHA256:  9d1983941...[0m
+[0;32mI (363) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (368) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (373) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (378) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (383) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (390) heap_init: At 40815220 len 00038160 (224 KiB): RAM[0m
+[0;32mI (396) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (403) spi_flash: detected chip: generic[0m
+[0;32mI (407) spi_flash: flash io: dio[0m
+[0;33mW (411) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (425) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (431) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (438) coexist: coex firmware version: 27d8387[0m
+[0;32mI (444) main_task: Started on CPU0[0m
+[0;32mI (444) main_task: Calling app_main()[0m
+[0;32mI (454) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (464) BLE_INIT: ble controller commit:[7491a85][0m
+[0;32mI (464) BLE_INIT: Bluetooth MAC: 74:4d:bd:62:13:98[0m
+[0;32mI (474) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10[0m
+[0;32mI (494) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22[0m
+[0;32mI (504) NimBLE: GAP procedure initiated: stop advertising.
+[0m
+[0;32mI (504) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (504) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (524) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (534) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (544) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (574) HDC1080: I2C master bus created[0m
+[0;31mE (774) i2c.master: I2C software timeout[0m
+[0;31mE (774) i2c.master: probe device timeout. Please check if xfer_timeout_ms and pull-ups are correctly set up[0m
+[0;32mI (1774) HDC1080: Sensor configuration successful[0m
+[0;32mI (1774) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (2824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (3824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (4874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (5874) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (6924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (7924) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (8974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (9974) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (11024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (12024) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (13074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (14074) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (1774) HDC1080: Sensor configuration successful[0m
+[0;32mI (1774) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (2824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (3824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (4874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (5874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (6924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (7924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (8974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (9974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (11024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (12024) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (13074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (14074) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (15124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (16124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (17174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (18174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (19224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (20224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (21274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (22274) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (23324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (24324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (25374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (26374) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (27424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (28424) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (29474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (30474) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (31524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (32524) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (33574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (34574) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (35624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (36624) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (37674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (38674) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (39724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (40724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (41774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (42774) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (43824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (44824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (45874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (46874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (47924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (48924) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (49974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (50974) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (52024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (53024) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (54074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (55074) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (56124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (57124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (58174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (59174) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (60224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (61224) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (62274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (63274) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (64324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (65324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (66374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (67374) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (68424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (69424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (70474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (71474) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (72524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (73524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (74574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (75574) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (76624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (77624) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (78674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (79674) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (80724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (81724) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (82774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (83774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (84824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (85824) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (86874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (87874) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (88924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (89924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (90974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (91974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (93024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (94024) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (95074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (96074) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (97124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (98124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (99174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (100174) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (101224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (102224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (103274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (104274) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (105324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (106324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (107374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (108374) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (109424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (110424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (111474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (112474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (113524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (114524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (115574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (116574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (117624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (118624) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (119674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (120674) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (121724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (122724) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (123774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (124774) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (125824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (126824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (127874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (128874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (129924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (130924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (131974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (132974) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (134024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (135024) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (136074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (137074) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (138124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (139124) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (140174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (141174) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (142224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (143224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (144274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (145274) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (146324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (147324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (148374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (149374) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (150424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (151424) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (152474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (153474) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (154524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (155524) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (156574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (157574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (158624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (159624) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (160674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (161674) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (162724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (163724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (164774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (165774) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (166824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (167824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (168874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (169874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (170924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (171924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (172974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (173974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (175024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (176024) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (177074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (178074) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (179124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (180124) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (181174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (182174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (183224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (184224) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (185274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (186274) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (187324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (188324) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (189374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (190374) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (191424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (192424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (193474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (194474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (195524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (196524) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (197574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (198574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (199624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (200624) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (201674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (202674) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (203724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (204724) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (205774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (206774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (207824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (208824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (209874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (210874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (211924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (212924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (213974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (214974) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (216024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (217024) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (218074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (219074) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (220124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (221124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (222174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (223174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (224224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (225224) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (226274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (227274) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (228324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (229324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (230374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (231374) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (232424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (233424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (234474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (235474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (236524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (237524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (238574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (239574) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (240624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (241624) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (242674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (243674) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (244724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (245724) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (246774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (247774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (248824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (249824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (250874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (251874) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (252924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (253924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (254974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (255974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (257024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (258024) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (259074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (260074) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (261124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (262124) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (263174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (264174) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (265224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (266224) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (267274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (268274) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (269324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (270324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (271374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (272374) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (273424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (274424) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (275474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (276474) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (277524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (278524) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (279574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (280574) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (281624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (282624) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (283674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (284674) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (285724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (286724) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (287774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (288774) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (289824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (290824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (291874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (292874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (293924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (294924) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (295974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (296974) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (298024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (299024) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (300074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (301074) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (302124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (303124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (304174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (305174) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (306224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (307224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (308274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (309274) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (310324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (311324) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (312374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (313374) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (314424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (315424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (316474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (317474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (318524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (319524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (320574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (321574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (322624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (323624) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (324674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (325674) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (326724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (327724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (328774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (329774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (330824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (331824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (332874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (333874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (334924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (335924) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (336974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (337974) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (339024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (340024) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (341074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (342074) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (343124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (344124) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (345174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (346174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (347224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (348224) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (349274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (350274) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (351324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (352324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (353374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (354374) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (355424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (356424) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (357474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (358474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (359524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (360524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (361574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (362574) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (363624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (364624) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (365674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (366674) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (367724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (368724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (369774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (370774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (371824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (372824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (373874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (374874) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (375924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (376924) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (377974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (378974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (380024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (381024) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (382074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (383074) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (384124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (385124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (386174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (387174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (388224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (389224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (390274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (391274) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (392324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (393324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (394374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (395374) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (396424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (397424) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (398474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (399474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (400524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (401524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (402574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (403574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (404624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (405624) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (406674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (407674) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (408724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (409724) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (410774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (411774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (412824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (413824) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (414874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (415874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (416924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (417924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (418974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (419974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (421024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (422024) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (423074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (424074) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (425124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (426124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (427174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (428174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (429224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (430224) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (431274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (432274) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (433324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (434324) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (435374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (436374) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (437424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (438424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (439474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (440474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (441524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (442524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (443574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (444574) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (445624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (446624) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (447674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (448674) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (449724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (450724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (451774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (452774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (453824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (454824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (455874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (456874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (457924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (458924) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (459974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (460974) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (462024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (463024) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (464074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (465074) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (466124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (467124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (468174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (469174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (470224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (471224) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (472274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (473274) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (474324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (475324) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (476374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (477374) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (478424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (479424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (480474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (481474) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (482524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (483524) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (484574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (485574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (486624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (487624) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (488674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (489674) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (490724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (491724) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (492774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (493774) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (494824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (495824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (496874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (497874) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (498924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (499924) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (500974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (501974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (503024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (504024) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (505074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (506074) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (507124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (508124) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (509174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (510174) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (511224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (512224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (513274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (514274) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (515324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (516324) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (517374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (518374) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (519424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (520424) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (521474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (522474) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (523524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (524524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (525574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (526574) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (527624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (528624) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (529674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (530674) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (531724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (532724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (533774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (534774) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (535824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (536824) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (537874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (538874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (539924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (540924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (541974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (542974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (544024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (545024) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (546074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (547074) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (548124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (549124) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (550174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (551174) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (552224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (553224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (554274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (555274) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (556324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (557324) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (558374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (559374) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (560424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (561424) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (562474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (563474) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (564524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (565524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (566574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (567574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (568624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (569624) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (570674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (571674) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (572724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (573724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (574774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (575774) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (576824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (577824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (578874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (579874) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (580924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (581924) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (582974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (583974) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (585024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (586024) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (587074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (588074) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (589124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (590124) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (591174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (592174) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (593224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (594224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (595274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (596274) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (597324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (598324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (599374) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (600374) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (601424) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (602424) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (603474) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (604474) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (605524) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (606524) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (607574) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (608574) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (609624) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (610624) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (611674) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (612674) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (613724) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (614724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (615774) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (616774) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (617824) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (618824) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (619874) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (620874) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (621924) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (622924) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (623974) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (624974) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (626024) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (627024) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (628074) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (629074) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (630124) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (631124) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (632174) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (633174) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (634224) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (635224) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (636274) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (637274) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (638324) HDC1080: Temperature: -40.00°C
+[0m
+[0;32mI (639324) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (640374) HDC1080: Temperature: -40.00°C
+[0m

@@ -1,0 +1,158 @@
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (23) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (25) boot: chip revision: v0.1[0m
+[0;32mI (26) boot: efuse block revision: v0.2[0m
+[0;32mI (31) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (36) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42080020 size=1a4f0h (107760) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002a518 vaddr=40800000 size=05b00h ( 23296) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=79b3ch (498492) map[0m
+[0;32mI (279) esp_image: segment 3: paddr=000a9b64 vaddr=40805b00 size=0ad8ch ( 44428) load[0m
+[0;32mI (294) esp_image: segment 4: paddr=000b48f8 vaddr=40810890 size=02408h (  9224) load[0m
+[0;32mI (298) esp_image: segment 5: paddr=000b6d08 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (305) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (306) boot: Disabling RNG early entropy source...[0m
+[0;32mI (323) cpu_start: Unicore app[0m
+[0;33mW (332) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (338) cpu_start: Pro cpu start user code[0m
+[0;32mI (339) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (339) cpu_start: Application information:[0m
+[0;32mI (341) cpu_start: Project name:     blesensor[0m
+[0;32mI (346) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (352) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (358) cpu_start: ELF file SHA256:  4f984cb41...[0m
+[0;32mI (363) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (368) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (373) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (378) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (382) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (390) heap_init: At 40815220 len 00038160 (224 KiB): RAM[0m
+[0;32mI (396) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (403) spi_flash: detected chip: generic[0m
+[0;32mI (407) spi_flash: flash io: dio[0m
+[0;33mW (410) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (424) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (431) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (438) coexist: coex firmware version: 27d8387[0m
+[0;32mI (444) main_task: Started on CPU0[0m
+[0;32mI (444) main_task: Calling app_main()[0m
+[0;32mI (454) BLE_INIT: Using main XTAL as clock source[0m
+[0;32mI (464) BLE_INIT: ble controller commit:[7491a85][0m
+[0;32mI (464) BLE_INIT: Bluetooth MAC: 74:4d:bd:62:13:98[0m
+[0;32mI (474) phy: phy_version: 310,2, 8fa9cb4, Jun  5 2024, 14:19:10[0m
+[0;32mI (494) phy: libbtbb version: a024da6, Jun  5 2024, 14:19:22[0m
+[0;32mI (494) NimBLE: GAP procedure initiated: stop advertising.
+[0m
+[0;32mI (504) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (504) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (524) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (534) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (544) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (574) HDC1080: I2C master bus created[0m
+[0;32mI (574) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (1594) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (2594) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (3604) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (4604) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (5614) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (6614) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (7624) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (8624) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (9634) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (10634) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (11644) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (12644) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (13654) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (14654) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (15664) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (16664) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (17674) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (18674) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (19684) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (20684) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (21694) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (22694) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (23704) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (24704) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (25714) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (26714) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (27724) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (28724) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (29734) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (30734) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (31744) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (32744) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (33754) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (34754) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (35764) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (36764) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (37774) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (38774) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (39784) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (40784) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (41794) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (42794) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (43804) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (44804) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (45814) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (46814) HDC1080: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (47824) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (48824) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (49834) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (50834) HDC1080: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (51844) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (52844) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (53854) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (54854) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (55864) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (56864) HDC1080: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (57874) HDC1080: Temperature: -16.29°C
+[0m
+[0;32mI (58874) HDC1080: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (59884) HDC1080: Temperature: -16.29°C
+[0m

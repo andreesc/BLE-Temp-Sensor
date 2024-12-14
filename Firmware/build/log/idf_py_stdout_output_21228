@@ -1,0 +1,416 @@
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (23) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (25) boot: chip revision: v0.1[0m
+[0;32mI (26) boot: efuse block revision: v0.2[0m
+[0;32mI (31) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (36) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42040020 size=1605ch ( 90204) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=00026084 vaddr=40800000 size=01f94h (  8084) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=3981ch (235548) map[0m
+[0;32mI (196) esp_image: segment 3: paddr=00061844 vaddr=40801f94 size=08f90h ( 36752) load[0m
+[0;32mI (208) esp_image: segment 4: paddr=0006a7dc vaddr=4080af30 size=01950h (  6480) load[0m
+[0;32mI (211) esp_image: segment 5: paddr=0006c134 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (217) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (220) boot: Disabling RNG early entropy source...[0m
+[0;32mI (237) cpu_start: Unicore app[0m
+[0;33mW (246) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (252) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (253) cpu_start: Application information:[0m
+[0;32mI (255) cpu_start: Project name:     blesensor[0m
+[0;32mI (260) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (266) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (272) cpu_start: ELF file SHA256:  dbd8b5abc...[0m
+[0;32mI (277) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (282) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (287) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (292) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (297) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (304) heap_init: At 4080DD80 len 0003F600 (253 KiB): RAM[0m
+[0;32mI (310) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (321) spi_flash: flash io: dio[0m
+[0;33mW (325) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (345) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (352) coexist: coex firmware version: 27d8387[0m
+[0;32mI (358) main_task: Started on CPU0[0m
+[0;32mI (358) main_task: Calling app_main()[0m
+[0;32mI (358) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (368) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (388) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (398) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (408) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (438) HDC1080: I2C master bus created[0m
+[0;32mI (488) HDC1080: Sensor configuration successful[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x4200e030  RA      : 0x4200e06a  SP      : 0x40810ea0  GP      : 0x4080b730  
+TP      : 0x407faff4  T0      : 0x4000af8c  T1      : 0xffffffe0  T2      : 0x00003000  
+S0/FP   : 0x40813514  S1      : 0x00000000  A0      : 0x4081352e  A1      : 0x40813534  
+A2      : 0x00039e68  A3      : 0x00000800  A4      : 0xffffffff  A5      : 0x00000000  
+A6      : 0x0000000f  A7      : 0x00000010  S2      : 0x00000000  S3      : 0x80000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000900  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000005  MTVAL   : 0x00000044  
+MHARTID : 0x00000000  
+
+0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+224	    return npl_funcs->p_ble_npl_mutex_pend(mu, timeout);
+#0  0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+#1  ble_hs_lock_nested () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+#2  0x4200e06a in ble_hs_lock () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:223
+#3  0x420121a8 in ble_gatts_reset () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:3189
+#4  0x4200a54e in NimBLEDevice::createServer () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/src/NimBLEDevice.cpp:122
+#5  0x4200979e in app_main () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:248
+#6  0x42038d8c in main_task (args=<error reading variable: value has been optimized out>) at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x40805dc4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: dbd8b5abc
+
+Rebooting...
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400031b6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (27) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (29) boot: chip revision: v0.1[0m
+[0;32mI (30) boot: efuse block revision: v0.2[0m
+[0;32mI (34) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (39) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=42040020 size=1605ch ( 90204) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00026084 vaddr=40800000 size=01f94h (  8084) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=3981ch (235548) map[0m
+[0;32mI (240) esp_image: segment 3: paddr=00061844 vaddr=40801f94 size=08f90h ( 36752) load[0m
+[0;32mI (259) esp_image: segment 4: paddr=0006a7dc vaddr=4080af30 size=01950h (  6480) load[0m
+[0;32mI (264) esp_image: segment 5: paddr=0006c134 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (272) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (273) boot: Disabling RNG early entropy source...[0m
+[0;32mI (288) cpu_start: Unicore app[0m
+[0;33mW (297) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (305) cpu_start: Application information:[0m
+[0;32mI (307) cpu_start: Project name:     blesensor[0m
+[0;32mI (312) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (317) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (323) cpu_start: ELF file SHA256:  dbd8b5abc...[0m
+[0;32mI (329) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (334) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (338) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (343) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (348) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (355) heap_init: At 4080DD80 len 0003F600 (253 KiB): RAM[0m
+[0;32mI (361) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (369) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (390) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (396) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (403) coexist: coex firmware version: 27d8387[0m
+[0;32mI (409) main_task: Started on CPU0[0m
+[0;32mI (409) main_task: Calling app_main()[0m
+[0;32mI (409) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (419) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (439) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (449) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (459) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (489) HDC1080: I2C master bus created[0m
+[0;32mI (539) HDC1080: Sensor configuration successful[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x4200e030  RA      : 0x4200e06a  SP      : 0x40810ea0  GP      : 0x4080b730  
+TP      : 0x407faff4  T0      : 0x4000af8c  T1      : 0xffffffe0  T2      : 0x00003000  
+S0/FP   : 0x40813514  S1      : 0x00000000  A0      : 0x4081352e  A1      : 0x40813534  
+A2      : 0x00039e68  A3      : 0x00000800  A4      : 0xffffffff  A5      : 0x00000000  
+A6      : 0x0000000f  A7      : 0x00000010  S2      : 0x00000000  S3      : 0x80000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000900  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000005  MTVAL   : 0x00000044  
+MHARTID : 0x00000000  
+
+0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+224	    return npl_funcs->p_ble_npl_mutex_pend(mu, timeout);
+#0  0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+#1  ble_hs_lock_nested () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+#2  0x4200e06a in ble_hs_lock () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:223
+#3  0x420121a8 in ble_gatts_reset () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:3189
+#4  0x4200a54e in NimBLEDevice::createServer () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/src/NimBLEDevice.cpp:122
+#5  0x4200979e in app_main () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:248
+#6  0x42038d8c in main_task (args=<error reading variable: value has been optimized out>) at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x40805dc4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: dbd8b5abc
+
+Rebooting...
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400031b6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (27) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (29) boot: chip revision: v0.1[0m
+[0;32mI (30) boot: efuse block revision: v0.2[0m
+[0;32mI (34) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (39) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=42040020 size=1605ch ( 90204) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00026084 vaddr=40800000 size=01f94h (  8084) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=3981ch (235548) map[0m
+[0;32mI (240) esp_image: segment 3: paddr=00061844 vaddr=40801f94 size=08f90h ( 36752) load[0m
+[0;32mI (259) esp_image: segment 4: paddr=0006a7dc vaddr=4080af30 size=01950h (  6480) load[0m
+[0;32mI (264) esp_image: segment 5: paddr=0006c134 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (272) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (273) boot: Disabling RNG early entropy source...[0m
+[0;32mI (288) cpu_start: Unicore app[0m
+[0;33mW (297) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (305) cpu_start: Application information:[0m
+[0;32mI (307) cpu_start: Project name:     blesensor[0m
+[0;32mI (312) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (317) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (323) cpu_start: ELF file SHA256:  dbd8b5abc...[0m
+[0;32mI (329) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (334) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (338) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (343) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (348) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (355) heap_init: At 4080DD80 len 0003F600 (253 KiB): RAM[0m
+[0;32mI (361) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (369) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (390) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (396) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (403) coexist: coex firmware version: 27d8387[0m
+[0;32mI (409) main_task: Started on CPU0[0m
+[0;32mI (409) main_task: Calling app_main()[0m
+[0;32mI (409) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (419) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (439) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (449) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (459) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (489) HDC1080: I2C master bus created[0m
+[0;32mI (539) HDC1080: Sensor configuration successful[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x4200e030  RA      : 0x4200e06a  SP      : 0x40810ea0  GP      : 0x4080b730  
+TP      : 0x407faff4  T0      : 0x4000af8c  T1      : 0xffffffe0  T2      : 0x00003000  
+S0/FP   : 0x40813514  S1      : 0x00000000  A0      : 0x4081352e  A1      : 0x40813534  
+A2      : 0x00039e68  A3      : 0x00000800  A4      : 0xffffffff  A5      : 0x00000000  
+A6      : 0x0000000f  A7      : 0x00000010  S2      : 0x00000000  S3      : 0x80000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000900  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000005  MTVAL   : 0x00000044  
+MHARTID : 0x00000000  
+
+0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+224	    return npl_funcs->p_ble_npl_mutex_pend(mu, timeout);
+#0  0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+#1  ble_hs_lock_nested () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+#2  0x4200e06a in ble_hs_lock () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:223
+#3  0x420121a8 in ble_gatts_reset () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:3189
+#4  0x4200a54e in NimBLEDevice::createServer () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/src/NimBLEDevice.cpp:122
+#5  0x4200979e in app_main () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:248
+#6  0x42038d8c in main_task (args=<error reading variable: value has been optimized out>) at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x40805dc4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: dbd8b5abc
+
+Rebooting...
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400031b6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (27) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (29) boot: chip revision: v0.1[0m
+[0;32mI (30) boot: efuse block revision: v0.2[0m
+[0;32mI (34) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (39) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=42040020 size=1605ch ( 90204) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00026084 vaddr=40800000 size=01f94h (  8084) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=3981ch (235548) map[0m
+[0;32mI (240) esp_image: segment 3: paddr=00061844 vaddr=40801f94 size=08f90h ( 36752) load[0m
+[0;32mI (259) esp_image: segment 4: paddr=0006a7dc vaddr=4080af30 size=01950h (  6480) load[0m
+[0;32mI (264) esp_image: segment 5: paddr=0006c134 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (272) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (273) boot: Disabling RNG early entropy source...[0m
+[0;32mI (288) cpu_start: Unicore app[0m
+[0;33mW (297) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (305) cpu_start: Application information:[0m
+[0;32mI (307) cpu_start: Project name:     blesensor[0m
+[0;32mI (312) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (317) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (323) cpu_start: ELF file SHA256:  dbd8b5abc...[0m
+[0;32mI (329) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (334) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (338) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (343) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (348) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (355) heap_init: At 4080DD80 len 0003F600 (253 KiB): RAM[0m
+[0;32mI (361) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (369) spi_flash: detected chip: generic[0m
+[0;32mI (372) spi_flash: flash io: dio[0m
+[0;33mW (376) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (390) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (396) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (403) coexist: coex firmware version: 27d8387[0m
+[0;32mI (409) main_task: Started on CPU0[0m
+[0;32mI (409) main_task: Calling app_main()[0m
+[0;32mI (409) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (419) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (439) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (449) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (459) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (489) HDC1080: I2C master bus created[0m
+[0;32mI (539) HDC1080: Sensor configuration successful[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x4200e030  RA      : 0x4200e06a  SP      : 0x40810ea0  GP      : 0x4080b730  
+TP      : 0x407faff4  T0      : 0x4000af8c  T1      : 0xffffffe0  T2      : 0x00003000  
+S0/FP   : 0x40813514  S1      : 0x00000000  A0      : 0x4081352e  A1      : 0x40813534  
+A2      : 0x00039e68  A3      : 0x00000800  A4      : 0xffffffff  A5      : 0x00000000  
+A6      : 0x0000000f  A7      : 0x00000010  S2      : 0x00000000  S3      : 0x80000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000900  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40800001  MCAUSE  : 0x00000005  MTVAL   : 0x00000044  
+MHARTID : 0x00000000  
+
+0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+224	    return npl_funcs->p_ble_npl_mutex_pend(mu, timeout);
+#0  0x4200e030 in ble_npl_mutex_pend (timeout=4294967295, mu=0x4080d9a0 <ble_hs_mutex>) at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/include/nimble/nimble_npl_os.h:224
+#1  ble_hs_lock_nested () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:178
+#2  0x4200e06a in ble_hs_lock () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_hs.c:223
+#3  0x420121a8 in ble_gatts_reset () at /home/andre/esp/esp-idf/components/bt/host/nimble/nimble/nimble/host/src/ble_gatts.c:3189
+#4  0x4200a54e in NimBLEDevice::createServer () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/src/NimBLEDevice.cpp:122
+#5  0x4200979e in app_main () at /home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:248
+#6  0x42038d8c in main_task (args=<error reading variable: value has been optimized out>) at /home/andre/esp/esp-idf/components/freertos/app_startup.c:208
+#7  0x40805dc4 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:255
+
+
+
+ELF file SHA256: dbd8b5abc
+
+Rebooting...
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0xc (SW_CPU),boot:0xc (SPI_FAST_FLASH_BOOT)
+Saved PC:0x400031b6
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (27) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (29) boot: chip revision: v0.1[0m
+[0;32mI (30) boot: efuse block revision: v0.2[0m
+[0;32mI (34) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (39) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=42040020 size=1605ch ( 90204) map[0m
+[0;32mI (137) esp_image: segment 1: paddr=00026084 vaddr=40800000 size=01f94h (  8084) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=00028020 vaddr=42000020 size=3981ch (235548) map[0m
+[0;32mI (240) esp_image: segment 3: paddr=00061844 vaddr=40801f94 size=08f90h ( 36752) load[0m
+[0;32mI (259) esp_image: segment 4: paddr=0006a7dc vaddr=4080af30 size=01950h (  6480) load[0m
+[0;32mI (264) esp_image: segment 5: paddr=0006c134 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (272) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (273) boot: Disabling RNG early entropy source...[0m
+[0;32mI (288) cpu_start: Unicore app[0m
+[0;33mW (297) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (305) cpu_start: Application information:[0m
+[0;32mI (307) cpu_start: Project name:     blesensor[0m
+[0;32mI (312) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (317) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (323) cpu_start: ELF file SHA256:  dbd8b5abc...[0m
+[0;32mI (329) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (334) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (338) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (343) cpu_start: Chip rev:         v0.1[0m

@@ -1,0 +1,228 @@
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (23) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 12 2024 16:38:30[0m
+[0;32mI (25) boot: chip revision: v0.1[0m
+[0;32mI (26) boot: efuse block revision: v0.2[0m
+[0;32mI (31) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (36) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42028020 size=0c474h ( 50292) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=0001c49c vaddr=40800000 size=03b7ch ( 15228) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=20898h (133272) map[0m
+[0;32mI (156) esp_image: segment 3: paddr=000408c0 vaddr=40803b7c size=06c2ch ( 27692) load[0m
+[0;32mI (166) esp_image: segment 4: paddr=000474f4 vaddr=4080a7b0 size=0174ch (  5964) load[0m
+[0;32mI (169) esp_image: segment 5: paddr=00048c48 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (175) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Unicore app[0m
+[0;33mW (203) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (210) cpu_start: Pro cpu start user code[0m
+[0;32mI (210) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (211) cpu_start: Application information:[0m
+[0;32mI (213) cpu_start: Project name:     blesensor[0m
+[0;32mI (218) cpu_start: App version:      e5825fc-dirty[0m
+[0;32mI (224) cpu_start: Compile time:     Dec 12 2024 17:18:25[0m
+[0;32mI (230) cpu_start: ELF file SHA256:  0c3789e20...[0m
+[0;32mI (235) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (240) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (245) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (249) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (254) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (261) heap_init: At 4080D010 len 00040370 (256 KiB): RAM[0m
+[0;32mI (267) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (275) spi_flash: detected chip: generic[0m
+[0;32mI (278) spi_flash: flash io: dio[0m
+[0;33mW (282) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (296) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (302) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (309) coexist: coex firmware version: 27d8387[0m
+[0;32mI (315) main_task: Started on CPU0[0m
+[0;32mI (315) main_task: Calling app_main()[0m
+[0;32mI (315) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (325) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (345) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (355) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (365) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (395) HDC1080: I2C master bus created[0m
+[0;32mI (445) HDC1080: Sensor configuration successful[0m
+[0;32mI (515) HDC1080: Temperature: 27.46°C
+[0m
+[0;32mI (1585) HDC1080: Temperature: 27.46°C
+[0m
+[0;32mI (2655) HDC1080: Temperature: 27.46°C
+[0m
+[0;32mI (3725) HDC1080: Temperature: 27.46°C
+[0m
+[0;32mI (4795) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (5865) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (6935) HDC1080: Temperature: 27.46°C
+[0m
+[0;32mI (8005) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (9075) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (10145) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (11215) HDC1080: Temperature: 27.46°C
+[0m
+[0;32mI (12285) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (13355) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (14425) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (15495) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (16565) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (17635) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (18705) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (19775) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (20845) HDC1080: Temperature: 27.41°C
+[0m
+[0;32mI (21915) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (22985) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (24055) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (25125) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (26195) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (27265) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (28335) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (29405) HDC1080: Temperature: 27.44°C
+[0m
+[0;32mI (30475) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (31545) HDC1080: Temperature: 27.41°C
+[0m
+[0;32mI (32615) HDC1080: Temperature: 27.41°C
+[0m
+[0;32mI (33685) HDC1080: Temperature: 27.40°C
+[0m
+[0;32mI (34755) HDC1080: Temperature: 27.41°C
+[0m
+[0;32mI (35825) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (36895) HDC1080: Temperature: 27.43°C
+[0m
+[0;32mI (37965) HDC1080: Temperature: 27.41°C
+[0m
+[0;32mI (39035) HDC1080: Temperature: 27.40°C
+[0m
+[0;32mI (40105) HDC1080: Temperature: 27.41°C
+[0m
+[0;32mI (41175) HDC1080: Temperature: 27.40°C
+[0m
+[0;32mI (42245) HDC1080: Temperature: 27.40°C
+[0m
+[0;32mI (43315) HDC1080: Temperature: 27.40°C
+[0m
+[0;32mI (44385) HDC1080: Temperature: 27.40°C
+[0m
+[0;32mI (45455) HDC1080: Temperature: 27.40°C
+[0m
+[0;32mI (46525) HDC1080: Temperature: 27.39°C
+[0m
+[0;32mI (47595) HDC1080: Temperature: 27.39°C
+[0m
+[0;32mI (48665) HDC1080: Temperature: 27.39°C
+[0m
+[0;32mI (49735) HDC1080: Temperature: 27.37°C
+[0m
+[0;32mI (50805) HDC1080: Temperature: 27.36°C
+[0m
+[0;32mI (51875) HDC1080: Temperature: 27.37°C
+[0m
+[0;32mI (52945) HDC1080: Temperature: 27.37°C
+[0m
+[0;32mI (54015) HDC1080: Temperature: 27.36°C
+[0m
+[0;32mI (55085) HDC1080: Temperature: 27.36°C
+[0m
+[0;32mI (56155) HDC1080: Temperature: 27.37°C
+[0m
+[0;32mI (57225) HDC1080: Temperature: 27.37°C
+[0m
+[0;32mI (58295) HDC1080: Temperature: 27.36°C
+[0m
+[0;32mI (59365) HDC1080: Temperature: 27.36°C
+[0m
+[0;32mI (60435) HDC1080: Temperature: 27.36°C
+[0m
+[0;32mI (61505) HDC1080: Temperature: 27.36°C
+[0m
+[0;32mI (62575) HDC1080: Temperature: 27.34°C
+[0m
+[0;32mI (63645) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (64715) HDC1080: Temperature: 27.34°C
+[0m
+[0;32mI (65785) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (66855) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (67925) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (68995) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (70065) HDC1080: Temperature: 27.31°C
+[0m
+[0;32mI (71135) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (72205) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (73275) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (74345) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (75415) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (76485) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (77555) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (78625) HDC1080: Temperature: 27.31°C
+[0m
+[0;32mI (79695) HDC1080: Temperature: 27.31°C
+[0m
+[0;32mI (80765) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (81835) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (82905) HDC1080: Temperature: 27.34°C
+[0m
+[0;32mI (83975) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (85045) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (86115) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (87185) HDC1080: Temperature: 27.32°C
+[0m
+[0;32mI (88255) HDC1080: Temperature: 27.32°C
+[0m

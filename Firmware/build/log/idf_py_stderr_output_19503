@@ -1,0 +1,14 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200c3c2: i2c_ll_master_clr_bus at /home/andre/esp/esp-idf/components/hal/esp32h2/include/hal/i2c_ll.h:750 (discriminator 1)
+ (inlined by) s_i2c_master_clear_bus at /home/andre/esp/esp-idf/components/driver/i2c/i2c_master.c:71 (discriminator 1)
+0x4200c3ec: s_i2c_hw_fsm_reset at /home/andre/esp/esp-idf/components/driver/i2c/i2c_master.c:109
+[0m
+[0;33m--- 0x40803e6c: rtc_clk_cal_32k_valid at /home/andre/esp/esp-idf/components/esp_hw_support/port/esp32h2/rtc_time.c:207 (discriminator 1)
+[0m
+[0;33m--- 0x4200d1f0: s_i2c_transaction_start at /home/andre/esp/esp-idf/components/driver/i2c/i2c_master.c:540
+[0m
+[0;33m--- 0x40805df8: vPortYield at /home/andre/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:667 (discriminator 3)
+[0m
+[0m

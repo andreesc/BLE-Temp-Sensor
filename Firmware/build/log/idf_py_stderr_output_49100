@@ -1,2 +1,0 @@
-warning: default on the choice symbol BT_NIMBLE_ENABLED (defined at /home/andre/esp/esp-idf/components/bt/Kconfig:22, /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/Kconfig:96) will have no effect, as defaults do not affect choice symbols
-warning: the choice symbol BT_NIMBLE_ENABLED (defined at /home/andre/esp/esp-idf/components/bt/Kconfig:22, /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/Kconfig:96) is defined with a prompt outside the choice

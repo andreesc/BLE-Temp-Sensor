@@ -1,0 +1,38 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/bootloader/esp-idf/esptool_py && /home/andre/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/andre/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/bootloader/bootloader.bin
+Bootloader binary size 0x5590 bytes. 0x2a70 bytes (33%) free.
+[2/7] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/blesensor.cpp.obj
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp: In function 'esp_err_t battery_init()':
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:90:15: warning: unused variable 'ret' [-Wunused-variable]
+   90 |     esp_err_t ret;
+      |               ^~~
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp: In function 'void app_main()':
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:150:11: warning: unused variable 'temperature' [-Wunused-variable]
+  150 |     float temperature;
+      |           ^~~~~~~~~~~
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:154:29: warning: unused variable 'err' [-Wunused-variable]
+  154 |     esp_err_t               err = battery_init();
+      |                             ^~~
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp: At global scope:
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:34:27: warning: 'TAG1' defined but not used [-Wunused-variable]
+   34 | static const char*        TAG1 = "Battery";
+      |                           ^~~~
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:27:12: warning: 'voltage' defined but not used [-Wunused-variable]
+   27 | static int voltage[2][10];
+      |            ^~~~~~~
+/home/andre/Documents/BLE-Temp-Sensor/Firmware/main/blesensor.cpp:26:12: warning: 'adc_raw' defined but not used [-Wunused-variable]
+   26 | static int adc_raw[2][10];
+      |            ^~~~~~~
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating ld/sections.ld
+warning: default on the choice symbol BT_NIMBLE_ENABLED (defined at /home/andre/esp/esp-idf/components/bt/Kconfig:22, /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/Kconfig:203) will have no effect, as defaults do not affect choice symbols
+warning: the choice symbol BT_NIMBLE_ENABLED (defined at /home/andre/esp/esp-idf/components/bt/Kconfig:22, /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/Kconfig:203) is defined with a prompt outside the choice
+[5/7] Linking CXX executable blesensor.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32h2 image...
+Merged 1 ELF section
+Successfully created esp32h2 image.
+Generated /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/blesensor.bin
+[7/7] cd /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/esp-idf/esptool_py && /home/andre/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/andre/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/partition_table/partition-table.bin /home/andre/Documents/BLE-Temp-Sensor/Firmware/build/blesensor.bin
+blesensor.bin binary size 0xa8170 bytes. Smallest app partition is 0x100000 bytes. 0x57e90 bytes (34%) free.

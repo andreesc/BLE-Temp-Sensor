@@ -1,0 +1,12 @@
+warning: default on the choice symbol BT_NIMBLE_ENABLED (defined at /home/andre/esp/esp-idf/components/bt/Kconfig:22, /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/Kconfig:96) will have no effect, as defaults do not affect choice symbols
+warning: the choice symbol BT_NIMBLE_ENABLED (defined at /home/andre/esp/esp-idf/components/bt/Kconfig:22, /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/Kconfig:96) is defined with a prompt outside the choice
+CMake Error at /home/andre/esp/esp-idf/tools/cmake/component.cmake:314 (message):
+  Include directory
+  '/home/andre/Documents/BLE-Temp-Sensor/Firmware/Components/esp-nimble-cpp-master'
+  is not a directory.
+Call Stack (most recent call first):
+  /home/andre/esp/esp-idf/tools/cmake/component.cmake:482 (__component_add_include_dirs)
+  main/CMakeLists.txt:1 (idf_component_register)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

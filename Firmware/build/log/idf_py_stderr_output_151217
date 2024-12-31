@@ -1,0 +1,44 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- Stack dump detected[0m
+[0;33m--- 0x4200bc0a: NimBLEServer::handleGapEvent(ble_gap_event*, void*) at /home/andre/Documents/BLE-Temp-Sensor/Firmware/components/esp-nimble-cpp-master/src/NimBLEServer.cpp:590
+[0m
+[0;33m--- 0x40805ec0: r_ble_phy_init_registers at ??:?
+0x4000af8c: multi_heap_internal_unlock in ROM
+0x408024cc: npl_freertos_eventq_put at /home/andre/esp/esp-idf/components/bt/porting/npl/freertos/src/npl_os_freertos.c:224
+[0m
+[0;33m--- 0x40800001: _vector_table at ??:?
+[0m
+[0m
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/__main__.py", line 4, in <module>
+    main()
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 449, in main
+    monitor.main_loop()
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 193, in main_loop
+    self._main_loop()
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 309, in _main_loop
+    super()._main_loop()
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/idf_monitor.py", line 241, in _main_loop
+    self.serial_handler.handle_serial_input(data, self.console_parser, self.coredump,  # type: ignore
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/serial_handler.py", line 156, in handle_serial_input
+    self.check_panic_decode_trigger(line_strip)
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_monitor/base/serial_handler.py", line 224, in check_panic_decode_trigger
+    out = self.panic_handler.process_panic_output(self._panic_buffer)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/andre/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages/esp_idf_panic_decoder/panic_output_decoder.py", line 38, in process_panic_output
+    output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.12/subprocess.py", line 1955, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'riscv32-esp-elf-gdb'

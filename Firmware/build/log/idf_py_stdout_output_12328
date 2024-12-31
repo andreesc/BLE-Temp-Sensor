@@ -1,0 +1,14 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32h2
+NOTICE: Skipping optional dependency: espressif/esp_hosted
+NOTICE: Skipping optional dependency: espressif/esp_wifi_remote
+NOTICE: Skipping optional dependency: idf
+Processing 1 dependencies:
+[1/1] idf (5.2.3)
+NOTICE: Skipping optional dependency: espressif/esp_hosted
+NOTICE: Skipping optional dependency: espressif/esp_wifi_remote
+NOTICE: Skipping optional dependency: idf
+-- Configuring incomplete, errors occurred!
+See also "/home/andre/Documents/BLE-Temp-Sensor/Firmware/build/CMakeFiles/CMakeOutput.log".
+FAILED: build.ninja 
+/home/andre/.espressif/tools/cmake/3.24.0/bin/cmake --regenerate-during-build -S/home/andre/Documents/BLE-Temp-Sensor/Firmware -B/home/andre/Documents/BLE-Temp-Sensor/Firmware/build

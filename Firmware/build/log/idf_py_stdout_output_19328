@@ -1,0 +1,283 @@
+ESP-ROM:esp32h2-20221101
+Build:Nov  1 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x408460e0,len:0x1894
+load:0x4083cfd0,len:0xf08
+load:0x4083efd0,len:0x2da0
+entry 0x4083cfda
+[0;32mI (23) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Dec 22 2024 14:50:46[0m
+[0;32mI (25) boot: chip revision: v0.1[0m
+[0;32mI (26) boot: efuse block revision: v0.2[0m
+[0;32mI (31) boot.esp32h2: SPI Speed      : 64MHz[0m
+[0;32mI (36) boot.esp32h2: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32h2: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (69) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42028020 size=0c704h ( 50948) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=0001c72c vaddr=40800000 size=038ech ( 14572) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=20e74h (134772) map[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040e9c vaddr=408038ec size=08638h ( 34360) load[0m
+[0;32mI (168) esp_image: segment 4: paddr=000494dc vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (172) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (173) boot: Disabling RNG early entropy source...[0m
+[0;32mI (188) cpu_start: Unicore app[0m
+[0;33mW (198) clk: esp_perip_clk_init() has not been implemented yet[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 96000000 Hz[0m
+[0;32mI (205) cpu_start: Application information:[0m
+[0;32mI (207) cpu_start: Project name:     blesensor[0m
+[0;32mI (212) cpu_start: App version:      9e9c4fc-dirty[0m
+[0;32mI (218) cpu_start: Compile time:     Dec 22 2024 15:05:21[0m
+[0;32mI (224) cpu_start: ELF file SHA256:  513bcd54e...[0m
+[0;32mI (229) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (234) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (239) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (244) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (248) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (255) heap_init: At 4080D0E0 len 000402A0 (256 KiB): RAM[0m
+[0;32mI (262) heap_init: At 4084D380 len 00002B60 (10 KiB): RAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (272) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (290) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (296) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (304) coexist: coex firmware version: 27d8387[0m
+[0;32mI (309) main_task: Started on CPU0[0m
+[0;32mI (309) main_task: Calling app_main()[0m
+[0;32mI (309) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (319) i2c.master: Please check pull-up resistances whether be connected properly. Otherwise unexpected behavior would happen. For more detailed information, please read docs[0m
+[0;32mI (339) gpio: GPIO[0]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (349) gpio: GPIO[1]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;33mW (359) i2c.master: Please note i2c asynchronous is only used for specific scenario currently. It's experimental for other users because user cannot get bus error from API. And It's not compatible with ``i2c_master_probe``. If user makes sure there won't be any error on bus and tested with no problem, this message can be ignored.[0m
+[0;32mI (389) HDC1080: I2C master bus created[0m
+[0;32mI (439) HDC1080: Sensor configuration successful[0m
+[0;32mI (509) HDC1080: Temperature: 23.53°C
+[0m
+[0;32mI (1509) Battery: ADC2 Channel[1] Cali Voltage: 1580 mV[0m
+[0;32mI (2579) HDC1080: Temperature: 23.53°C
+[0m
+[0;32mI (3579) Battery: ADC2 Channel[1] Cali Voltage: 1674 mV[0m
+[0;32mI (4649) HDC1080: Temperature: 23.53°C
+[0m
+[0;32mI (5649) Battery: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (6719) HDC1080: Temperature: 23.51°C
+[0m
+[0;32mI (7719) Battery: ADC2 Channel[1] Cali Voltage: 1707 mV[0m
+[0;32mI (8789) HDC1080: Temperature: 23.53°C
+[0m
+[0;32mI (9789) Battery: ADC2 Channel[1] Cali Voltage: 1754 mV[0m
+[0;32mI (10859) HDC1080: Temperature: 23.54°C
+[0m
+[0;32mI (11859) Battery: ADC2 Channel[1] Cali Voltage: 1738 mV[0m
+[0;32mI (12929) HDC1080: Temperature: 25.60°C
+[0m
+[0;32mI (13929) Battery: ADC2 Channel[1] Cali Voltage: 1691 mV[0m
+[0;32mI (14999) HDC1080: Temperature: 26.15°C
+[0m
+[0;32mI (15999) Battery: ADC2 Channel[1] Cali Voltage: 1566 mV[0m
+[0;32mI (17069) HDC1080: Temperature: 25.05°C
+[0m
+[0;32mI (18069) Battery: ADC2 Channel[1] Cali Voltage: 1690 mV[0m
+[0;32mI (19139) HDC1080: Temperature: 24.61°C
+[0m
+[0;32mI (20139) Battery: ADC2 Channel[1] Cali Voltage: 1706 mV[0m
+[0;32mI (21209) HDC1080: Temperature: 24.49°C
+[0m
+[0;32mI (22209) Battery: ADC2 Channel[1] Cali Voltage: 1580 mV[0m
+[0;32mI (23279) HDC1080: Temperature: 24.40°C
+[0m
+[0;32mI (24279) Battery: ADC2 Channel[1] Cali Voltage: 1612 mV[0m
+[0;32mI (25349) HDC1080: Temperature: 24.32°C
+[0m
+[0;32mI (26349) Battery: ADC2 Channel[1] Cali Voltage: 1581 mV[0m
+[0;32mI (27419) HDC1080: Temperature: 24.24°C
+[0m
+[0;32mI (28419) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (29489) HDC1080: Temperature: 24.15°C
+[0m
+[0;32mI (30489) Battery: ADC2 Channel[1] Cali Voltage: 1580 mV[0m
+[0;32mI (31559) HDC1080: Temperature: 24.09°C
+[0m
+[0;32mI (32559) Battery: ADC2 Channel[1] Cali Voltage: 1738 mV[0m
+[0;32mI (33629) HDC1080: Temperature: 24.02°C
+[0m
+[0;32mI (34629) Battery: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (35699) HDC1080: Temperature: 23.97°C
+[0m
+[0;32mI (36699) Battery: ADC2 Channel[1] Cali Voltage: 1533 mV[0m
+[0;32mI (37769) HDC1080: Temperature: 23.94°C
+[0m
+[0;32mI (38769) Battery: ADC2 Channel[1] Cali Voltage: 1565 mV[0m
+[0;32mI (39839) HDC1080: Temperature: 23.88°C
+[0m
+[0;32mI (40839) Battery: ADC2 Channel[1] Cali Voltage: 1706 mV[0m
+[0;32mI (41909) HDC1080: Temperature: 23.84°C
+[0m
+[0;32mI (42909) Battery: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (43979) HDC1080: Temperature: 23.79°C
+[0m
+[0;32mI (44979) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (46049) HDC1080: Temperature: 23.73°C
+[0m
+[0;32mI (47049) Battery: ADC2 Channel[1] Cali Voltage: 1690 mV[0m
+[0;32mI (48119) HDC1080: Temperature: 23.72°C
+[0m
+[0;32mI (49119) Battery: ADC2 Channel[1] Cali Voltage: 1550 mV[0m
+[0;32mI (50189) HDC1080: Temperature: 23.66°C
+[0m
+[0;32mI (51189) Battery: ADC2 Channel[1] Cali Voltage: 1675 mV[0m
+[0;32mI (52259) HDC1080: Temperature: 23.61°C
+[0m
+[0;32mI (53259) Battery: ADC2 Channel[1] Cali Voltage: 1581 mV[0m
+[0;32mI (54329) HDC1080: Temperature: 23.57°C
+[0m
+[0;32mI (55329) Battery: ADC2 Channel[1] Cali Voltage: 1706 mV[0m
+[0;32mI (56399) HDC1080: Temperature: 23.57°C
+[0m
+[0;32mI (57399) Battery: ADC2 Channel[1] Cali Voltage: 1517 mV[0m
+[0;32mI (58469) HDC1080: Temperature: 23.51°C
+[0m
+[0;32mI (59469) Battery: ADC2 Channel[1] Cali Voltage: 1533 mV[0m
+[0;32mI (60539) HDC1080: Temperature: 23.48°C
+[0m
+[0;32mI (61539) Battery: ADC2 Channel[1] Cali Voltage: 1691 mV[0m
+[0;32mI (62609) HDC1080: Temperature: 23.43°C
+[0m
+[0;32mI (63609) Battery: ADC2 Channel[1] Cali Voltage: 1595 mV[0m
+[0;32mI (64679) HDC1080: Temperature: 23.43°C
+[0m
+[0;32mI (65679) Battery: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (66749) HDC1080: Temperature: 23.40°C
+[0m
+[0;32mI (67749) Battery: ADC2 Channel[1] Cali Voltage: 1612 mV[0m
+[0;32mI (68819) HDC1080: Temperature: 23.40°C
+[0m
+[0;32mI (69819) Battery: ADC2 Channel[1] Cali Voltage: 1690 mV[0m
+[0;32mI (70889) HDC1080: Temperature: 23.35°C
+[0m
+[0;32mI (71889) Battery: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (72959) HDC1080: Temperature: 23.27°C
+[0m
+[0;32mI (73959) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (75029) HDC1080: Temperature: 23.22°C
+[0m
+[0;32mI (76029) Battery: ADC2 Channel[1] Cali Voltage: 1611 mV[0m
+[0;32mI (77099) HDC1080: Temperature: 23.17°C
+[0m
+[0;32mI (78099) Battery: ADC2 Channel[1] Cali Voltage: 1674 mV[0m
+[0;32mI (79169) HDC1080: Temperature: 23.19°C
+[0m
+[0;32mI (80169) Battery: ADC2 Channel[1] Cali Voltage: 1595 mV[0m
+[0;32mI (81239) HDC1080: Temperature: 23.16°C
+[0m
+[0;32mI (82239) Battery: ADC2 Channel[1] Cali Voltage: 1581 mV[0m
+[0;32mI (83309) HDC1080: Temperature: 23.15°C
+[0m
+[0;32mI (84309) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (85379) HDC1080: Temperature: 23.15°C
+[0m
+[0;32mI (86379) Battery: ADC2 Channel[1] Cali Voltage: 1691 mV[0m
+[0;32mI (87449) HDC1080: Temperature: 23.13°C
+[0m
+[0;32mI (88449) Battery: ADC2 Channel[1] Cali Voltage: 1566 mV[0m
+[0;32mI (89519) HDC1080: Temperature: 23.15°C
+[0m
+[0;32mI (90519) Battery: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (91589) HDC1080: Temperature: 23.15°C
+[0m
+[0;32mI (92589) Battery: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (93659) HDC1080: Temperature: 23.13°C
+[0m
+[0;32mI (94659) Battery: ADC2 Channel[1] Cali Voltage: 1550 mV[0m
+[0;32mI (95729) HDC1080: Temperature: 23.13°C
+[0m
+[0;32mI (96729) Battery: ADC2 Channel[1] Cali Voltage: 1690 mV[0m
+[0;32mI (97799) HDC1080: Temperature: 23.13°C
+[0m
+[0;32mI (98799) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (99869) HDC1080: Temperature: 23.12°C
+[0m
+[0;32mI (100869) Battery: ADC2 Channel[1] Cali Voltage: 1674 mV[0m
+[0;32mI (101939) HDC1080: Temperature: 23.10°C
+[0m
+[0;32mI (102939) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (104009) HDC1080: Temperature: 23.10°C
+[0m
+[0;32mI (105009) Battery: ADC2 Channel[1] Cali Voltage: 1691 mV[0m
+[0;32mI (106079) HDC1080: Temperature: 23.09°C
+[0m
+[0;32mI (107079) Battery: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (108149) HDC1080: Temperature: 23.10°C
+[0m
+[0;32mI (109149) Battery: ADC2 Channel[1] Cali Voltage: 1565 mV[0m
+[0;32mI (110219) HDC1080: Temperature: 23.09°C
+[0m
+[0;32mI (111219) Battery: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (112289) HDC1080: Temperature: 23.09°C
+[0m
+[0;32mI (113289) Battery: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (114359) HDC1080: Temperature: 23.09°C
+[0m
+[0;32mI (115359) Battery: ADC2 Channel[1] Cali Voltage: 1596 mV[0m
+[0;32mI (116429) HDC1080: Temperature: 23.09°C
+[0m
+[0;32mI (117429) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (118499) HDC1080: Temperature: 23.05°C
+[0m
+[0;32mI (119499) Battery: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (120569) HDC1080: Temperature: 23.05°C
+[0m
+[0;32mI (121569) Battery: ADC2 Channel[1] Cali Voltage: 1643 mV[0m
+[0;32mI (122639) HDC1080: Temperature: 23.04°C
+[0m
+[0;32mI (123639) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (124709) HDC1080: Temperature: 23.02°C
+[0m
+[0;32mI (125709) Battery: ADC2 Channel[1] Cali Voltage: 1690 mV[0m
+[0;32mI (126779) HDC1080: Temperature: 23.02°C
+[0m
+[0;32mI (127779) Battery: ADC2 Channel[1] Cali Voltage: 1675 mV[0m
+[0;32mI (128849) HDC1080: Temperature: 23.00°C
+[0m
+[0;32mI (129849) Battery: ADC2 Channel[1] Cali Voltage: 1706 mV[0m
+[0;32mI (130919) HDC1080: Temperature: 23.01°C
+[0m
+[0;32mI (131919) Battery: ADC2 Channel[1] Cali Voltage: 1675 mV[0m
+[0;32mI (132989) HDC1080: Temperature: 22.97°C
+[0m
+[0;32mI (133989) Battery: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (135059) HDC1080: Temperature: 22.95°C
+[0m
+[0;32mI (136059) Battery: ADC2 Channel[1] Cali Voltage: 1691 mV[0m
+[0;32mI (137129) HDC1080: Temperature: 22.95°C
+[0m
+[0;32mI (138129) Battery: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (139199) HDC1080: Temperature: 22.95°C
+[0m
+[0;32mI (140199) Battery: ADC2 Channel[1] Cali Voltage: 1611 mV[0m
+[0;32mI (141269) HDC1080: Temperature: 22.95°C
+[0m
+[0;32mI (142269) Battery: ADC2 Channel[1] Cali Voltage: 1644 mV[0m
+[0;32mI (143339) HDC1080: Temperature: 22.97°C
+[0m
+[0;32mI (144339) Battery: ADC2 Channel[1] Cali Voltage: 1659 mV[0m
+[0;32mI (145409) HDC1080: Temperature: 22.95°C
+[0m
+[0;32mI (146409) Battery: ADC2 Channel[1] Cali Voltage: 1628 mV[0m
+[0;32mI (147479) HDC1080: Temperature: 22.97°C
+[0m
+[0;32mI (148479) Battery: ADC2 Channel[1] Cali Voltage: 1627 mV[0m
+[0;32mI (149549) HDC1080: Temperature: 22.97°C
+[0m
+[0;32mI (150549) Battery: ADC2 Channel[1] Cali Voltage: 1565 mV[0m
+[0;32mI (151619) HDC1080: Temperature: 22.98°C
+[0m
+[0;32mI (152619) Battery: ADC2 Channel[1] Cali Voltage: 1675 mV[0m

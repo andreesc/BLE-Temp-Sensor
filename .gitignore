@@ -1,3 +1,5 @@
-./Firmware/build/
-./Firmware/.vscode/
-./Firmware/.cache/
+Firmware/build/
+Firmware/.vscode/
+Firmware/.cache/
+Firmware/main/build/
+

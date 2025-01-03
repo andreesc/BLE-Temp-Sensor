@@ -23,20 +23,24 @@ extern "C"
 
 #define ADC_CHANNEL ADC_CHANNEL_1
 #define ADC_UNIT ADC_UNIT_1
-static int adc_raw[2][10];
-static int voltage[2][10];
+static int adc_raw;
+static int voltage;
 
 #define SERVICE_UUID "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"  // UART service UUID
 #define CHARACTERISTIC_UUID_RX "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
 #define CHARACTERISTIC_UUID_TX "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
 
 static const char *TAG = "HDC1080";
-static const char*        TAG1 = "Battery";
+static const char* TAG1 = "Battery";
+static const char* TAG2 = "BLE";
+
 i2c_master_dev_handle_t   hdc1080_handle;
 adc_oneshot_unit_handle_t adc1_handle;
 adc_cali_handle_t         cali_handle;
 
 static NimBLEServer* pServer;
+//static uint8_t phy = BLE_GAP_LE_PHY_2M_MASK;
+//static uint16_t phyOpt = BLE_GAP_LE_PHY_CODED_ANY;
 NimBLECharacteristic* pTxCharacteristic;
 std::string rxValue;
 bool               deviceConnected = false;
@@ -45,8 +49,16 @@ bool               oldDeviceConnected = false;
 class ServerCallbacks : public NimBLEServerCallbacks
 {
 public:
-    void onConnect(NimBLEServer* pServer, NimBLEConnInfo& connInfo) override { deviceConnected = true; ESP_LOGI(TAG, "connected"); };
+    void onConnect(NimBLEServer* pServer, NimBLEConnInfo& connInfo) override 
+    { 
+      deviceConnected = true;
+      ESP_LOGI(TAG2, "Device connected");
+      //pServer->updateConnParams(connInfo.getConnHandle(), 24, 48, 0, 18); // args: conn handle, minInterval, maxInterval, peripheral latency, timeout;
+      //pServer->updatePhy(connInfo.getConnHandle(), phy, phy, phyOpt);  // se necessario utilizar o 2M phy com o extended advertising para economizar bateria;
+    };
+
     void onDisconnect(NimBLEServer* pServer, NimBLEConnInfo& connInfo, int reason) override { deviceConnected = false; }
+
 } serverCallbacks;
 
 class CharacteristicCallbacks : public NimBLECharacteristicCallbacks
@@ -87,8 +99,6 @@ i2c_master_bus_handle_t i2c_bus_init()
 
 esp_err_t battery_init(void)
 {
-    esp_err_t ret;
-
     adc_oneshot_unit_init_cfg_t init_config1;
     init_config1.unit_id = ADC_UNIT;
     init_config1.ulp_mode = ADC_ULP_MODE_DISABLE;
@@ -125,12 +135,22 @@ void connectedTask(void* parameter)
             pTxCharacteristic->notify();
             rxValue = "";
           } 
+
+          if (rxValue == "v")
+          {
+            ESP_ERROR_CHECK(adc_oneshot_read(adc1_handle, ADC_CHANNEL, &adc_raw));
+            ESP_ERROR_CHECK(adc_cali_raw_to_voltage(cali_handle, adc_raw, &voltage));
+            ESP_LOGI(TAG1, "ADC%d Channel[%d] Cali Voltage: %d mV", ADC_UNIT_2 + 1, ADC_CHANNEL, voltage);
+            pTxCharacteristic->setValue(std::to_string(voltage));
+            pTxCharacteristic->notify();
+            rxValue = "";
+          }
         }
 
         if (!deviceConnected && oldDeviceConnected)
         {
             pServer->startAdvertising();
-            printf("start advertising\n");
+            ESP_LOGI(TAG2, "start advertising\n");
             oldDeviceConnected = deviceConnected;
         }
 
@@ -147,49 +167,36 @@ void connectedTask(void* parameter)
 
 void app_main(void)
 {
-    float temperature;
     // Inicializar o dispositivo BLE
     NimBLEDevice::init("Sensor");
 
-    esp_err_t               err = battery_init();
+    battery_init();
     i2c_master_bus_handle_t bus_handle = i2c_bus_init();
     hdc1080_handle = hdc1080_device_create(bus_handle);
 
     hdc1080_start_measurement(hdc1080_handle);
 
-   // while (1)
-   // {
-   //     hdc1080_read_measurement(hdc1080_handle, &temperature);
-   //     ESP_LOGI(TAG, "Temperature: %.2f°C\n", temperature);
-   //     vTaskDelay(pdMS_TO_TICKS(1000));
-   //     ESP_ERROR_CHECK(adc_oneshot_read(adc1_handle, ADC_CHANNEL, &adc_raw[0][0]));
-   //     ESP_ERROR_CHECK(adc_cali_raw_to_voltage(cali_handle, adc_raw[0][0], &voltage[0][0]));
-   //     ESP_LOGI(TAG1, "ADC%d Channel[%d] Cali Voltage: %d mV", ADC_UNIT_2 + 1, ADC_CHANNEL, voltage[0][0]);
-   //     vTaskDelay(pdMS_TO_TICKS(1000));
-   // }
-
-
-    // Criar o servidor BLE
+    // Cria o servidor BLE 
     pServer = NimBLEDevice::createServer();
     pServer->setCallbacks(&serverCallbacks);
 
-    // Criar o serviço BLE
+    // Criar o serviço BLE (no caso NORDIC UART) com duas características (TX e RX)
     NimBLEService* pService = pServer->createService(SERVICE_UUID);
-
-    // Criar a característica BLE para notificação
-    pTxCharacteristic = pService->createCharacteristic(CHARACTERISTIC_UUID_TX, NIMBLE_PROPERTY::NOTIFY);
-
-    // Criar a característica BLE para escrita
-    NimBLECharacteristic* pRxCharacteristic = pService->createCharacteristic(CHARACTERISTIC_UUID_RX, NIMBLE_PROPERTY::WRITE);
+    pTxCharacteristic = pService->createCharacteristic(CHARACTERISTIC_UUID_TX, NIMBLE_PROPERTY::NOTIFY); // Cria a característica BLE para notificação (Tx);
+    NimBLECharacteristic* pRxCharacteristic = pService->createCharacteristic(CHARACTERISTIC_UUID_RX, NIMBLE_PROPERTY::WRITE); // Cria a característica BLE para escrita (Rx);
     pRxCharacteristic->setCallbacks(&chrCallbacks);
+    pService->start(); // Iniciar o serviço BLE
 
-    // Iniciar o serviço BLE
-    pService->start();
+    // Instância de advertising 
     NimBLEAdvertising* pAdvertising = NimBLEDevice::getAdvertising();
     pAdvertising->setName("Sensor");
     pAdvertising->addServiceUUID(pService->getUUID());
+    pAdvertising->enableScanResponse(false); // Se precisar transferir mais dados no pacote de advertising, setar como true e configurar com setScanResponseData;
+    pAdvertising->setMinInterval(0); // Valor default, mudar dps para economizar bateria
+    pAdvertising->setMaxInterval(0);
+
     pServer->start();                                                                            
     pServer->getAdvertising()->start(); 
     xTaskCreate(connectedTask, "connectedTask", 5000, NULL, 1, NULL);
-    printf("Waiting a client connection to notify...\n");
+    ESP_LOGI(TAG2, "Waiting a client connection to notify...\n");
 }
